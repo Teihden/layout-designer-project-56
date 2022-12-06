@@ -1,0 +1,34 @@
+{
+  "name": "layout-designer-project-56",
+  "version": "1.0.0",
+  "description": "Second project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Teihden/layout-designer-project-56"
+  },
+  "main": "",
+  "devDependencies": {
+    "git-scripts": "^0.6.4",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^14.16.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "surge": "^0.23.1"
+  },
+  "scripts": {
+    "deploy": "surge --project ./src --domain https://mus-box.surge.sh"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "npm run deploy"
+    }
+  },
+  "author": "Teihden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teihden/layout-designer-project-56/issues"
+  }
+}
