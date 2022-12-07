@@ -1,5 +1,6 @@
 .github
-/node_modules/
+./node_modules
+./scss
 .editorconfig
 .gitignore
 .htmlhintrc

@@ -15,10 +15,6 @@
   margin-top: 0;
 }
 
-@mixin margin-bottom($value) {
-  margin-bottom: #{$value}px;
-}
-
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -49,72 +45,7 @@ body {
   background: $black;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-  text-transform: uppercase;
-
-  @include media(medium) {
-    font-size: 30px;
-    line-height: 45px;
-  }
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 57px;
-  text-transform: uppercase;
-
-  @include media(medium) {
-    font-size: 18px;
-    line-height: 27px;
-  }
-}
-
-h3 {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 45px;
-  text-transform: uppercase;
-
-  @include media(medium) {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  &.capitalize {
-    text-transform: capitalize;
-
-    &.bold {
-      font-weight: 700;
-    }
-  }
-}
-
-h4 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
-  text-transform: uppercase;
-
-  @include media(small) {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  &.capitalize.bold {
-    text-transform: capitalize;
-  }
-}
-
 // Text
-
-// .text-color-white {
-//     color: $white;
-// }
 
 @mixin text-transform-uppercase {
   text-transform: uppercase;
@@ -125,7 +56,7 @@ h4 {
 @mixin container {
   box-sizing: border-box;
 
-  width: clamp(350px, 100%, 1200px);
+  width: clamp($min-width-container, 100%, $max-width-container);
   margin: 0 auto;
 }
 
@@ -152,12 +83,87 @@ h4 {
 
   display: block;
 
-  padding: 20px 30px;
+  padding-inline: 30px;
   border: 1px solid $white;
   border-radius: 5px;
 
-  color: $white;
+  color: inherit;
   text-decoration: none;
 
   background-color: transparent;
+}
+
+// Headings
+
+h1 {
+  @include text-transform-uppercase;
+
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+
+  color: $white;
+
+  @include media(medium) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+h2 {
+  @include text-transform-uppercase;
+
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 57px;
+
+  color: $white;
+
+  @include media(medium) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+h3 {
+  @include text-transform-uppercase;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 45px;
+
+  color: $white;
+
+  @include media(medium) {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &.capitalize {
+    text-transform: capitalize;
+
+    &.bold {
+      font-weight: 700;
+    }
+  }
+}
+
+h4 {
+  @include text-transform-uppercase;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: $white;
+
+  @include media(small) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &.capitalize.bold {
+    text-transform: capitalize;
+  }
 }

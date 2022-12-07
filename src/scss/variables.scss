@@ -28,6 +28,8 @@ $font-size-0: 13.3px;
 $font-size-small: 12.8px;
 $font-size-ultra-small: 11px;
 
-// Gaps
+// Length
 
-$gap-value-default: 1rem;
+$value-default: 1rem;
+$min-width-container: 350px;
+$max-width-container: 1200px;

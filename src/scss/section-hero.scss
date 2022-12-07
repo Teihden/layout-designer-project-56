@@ -33,7 +33,7 @@
       @include container-flex;
 
       justify-content: space-between;
-      gap: $gap-value-default * 1.5;
+      gap: $value-default * 1.5;
 
       max-width: 570px;
 
@@ -58,6 +58,8 @@
 
       .btn {
         flex: 1 1 100%;
+
+        padding-block: 20px;
 
         border: none;
         background: $green;

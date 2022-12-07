@@ -4,7 +4,7 @@
     @include container-flex;
     @include text-transform-uppercase;
 
-    row-gap: $gap-value-default;
+    row-gap: $value-default;
     justify-content: space-between;
 
     position: absolute;
@@ -32,7 +32,7 @@
         @include container-flex-column;
 
         align-items: flex-start;
-        row-gap: $gap-value-default;
+        row-gap: $value-default;
       }
     }
 
@@ -46,8 +46,8 @@
       }
 
       img {
-        width: 24px;
-        margin-right: 16px;
+        width: $value-default * 1.5;
+        margin-right: $value-default;
       }
 
       div {
@@ -59,13 +59,20 @@
       @include reset;
       @include container-flex;
 
-      column-gap: $gap-value-default * 1.5;
+      column-gap: $value-default * 1.5;
       list-style: none;
 
       @include media(small) {
         @include container-flex-column;
 
         align-items: flex-start;
+      }
+
+      li {
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
       }
 
       li:nth-child(1) {
