@@ -1,0 +1,90 @@
+.section-pricing {
+  @include container;
+
+  padding-top: 100px;
+
+  color: $white;
+  text-align: center;
+
+  .backgound-subscribe-1 {
+    background-image: url("../images/subscribe_1.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .backgound-subscribe-2 {
+    background-image: url("../images/subscribe_2.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .backgound-subscribe-3 {
+    background-image: url("../images/subscribe_3.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include media(large) {
+    @include padding-horizontal-20;
+  }
+
+  header {
+    h2 {
+      @include reset;
+
+      margin-bottom: 48px;
+    }
+  }
+
+  .container-flex {
+    @include container-flex;
+    @include margin-bottom(40);
+
+    justify-content: center;
+    gap: 50px;
+
+    .pricing-item {
+      box-sizing: border-box;
+      flex: 1 1 30%;
+
+      min-width: 350px;
+      max-width: 450px;
+
+      padding: 0 1.5rem;
+
+      border-radius: 1rem;
+
+      h3 {
+        margin-bottom: 200px;
+      }
+
+      .pricing-value {
+        @include text-transform-uppercase;
+        @include margin-bottom(40);
+
+        .value {
+          font-size: $font-size-7;
+          line-height: 1em;
+
+          margin-right: 1rem;
+        }
+
+        .currency {
+          font-size: $font-size-3;
+
+          vertical-align: top;
+        }
+      }
+
+      .pricing-footer {
+        @include margin-bottom(64);
+
+        font-size: $font-size-small;
+      }
+
+      .btn {
+        @include margin-bottom(64);
+      }
+    }
+  }
+}

@@ -18,13 +18,15 @@
       @include padding-horizontal-20;
     }
 
-    h1 {
-      @include reset;
-    }
+    header {
+      h1 {
+        @include reset;
+      }
 
-    h2,
-    p {
-      @include reset-margin-top;
+      h2,
+      p {
+        @include reset-margin-top;
+      }
     }
 
     form {
@@ -54,20 +56,13 @@
         background-color: transparent;
       }
 
-      input[type="submit"] {
-        @include text-transform-uppercase;
-        @include reset;
-
+      .btn {
         flex: 1 1 100%;
 
-        padding: 20px 30px;
-        border-radius: 5px;
-
+        border: none;
         background: $green;
 
-        color: $white;
-
-        font-size: 13.3px;
+        font-size: $font-size-0;
         line-height: 15px;
       }
     }

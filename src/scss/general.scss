@@ -15,6 +15,10 @@
   margin-top: 0;
 }
 
+@mixin margin-bottom($value) {
+  margin-bottom: #{$value}px;
+}
+
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -139,4 +143,21 @@ h4 {
 @mixin container-flex-column {
   display: flex;
   flex-direction: column;
+}
+
+// Buttons
+
+.btn {
+  @include text-transform-uppercase;
+
+  display: block;
+
+  padding: 20px 30px;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  color: $white;
+  text-decoration: none;
+
+  background-color: transparent;
 }
