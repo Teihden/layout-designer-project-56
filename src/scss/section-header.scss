@@ -1,0 +1,114 @@
+.section-header {
+    .container {
+        @include container;
+        @include container-flex;
+        @include text-transform-uppercase;
+
+        row-gap: $gap-value-default;
+        justify-content: space-between;
+
+        position: absolute;
+        top: 25px;
+        right: 0;
+        left: 0;
+
+        font-size: $font-size-11;
+
+        @include media(large) {
+            @include padding-horizontal-20;
+        }
+
+        @include media(small) {
+            @include container-flex-column;
+            @include padding-horizontal-20;
+
+            align-items: flex-start;
+        }
+
+        .container-flex {
+            @include container-flex;
+
+            @include media(small) {
+                @include container-flex-column;
+
+                align-items: flex-start;
+                row-gap: $gap-value-default;
+            }
+        }
+
+        .logo {
+            @include container-flex;
+
+            margin-right: 90px;
+
+            @include media(small) {
+                margin: 0;
+            }
+
+            img {
+                width: 24px;
+                margin-right: 16px;
+            }
+
+            div {
+                color: $white;
+            }
+        }
+
+        ul {
+            @include reset;
+            @include container-flex;
+
+            column-gap: $gap-value-default * 1.5;
+            list-style: none;
+
+            @include media(small) {
+                @include container-flex-column;
+
+                align-items: flex-start;
+            }
+
+            li:nth-child(1) {
+                color: $white;
+
+                @include media(small) {
+                    color: $gray;
+                }
+            }
+
+            li:nth-child(3) {
+                @include media(small) {
+                    color: $white;
+                }
+            }
+        }
+
+        input {
+            @include reset;
+
+            width: 248px;
+            height: 25px;
+
+            margin-left: 20px;
+            padding: 5px 10px;
+
+            background: $dark;
+            border-radius: 50px;
+
+            @include media(medium) {
+                width: 100%;
+
+                margin: 0;
+            }
+
+            &::placeholder {
+                @include text-transform-uppercase;
+
+                color: #757575;
+
+                font-size: 13.3px;
+                line-height: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.section-hero {
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+
+    .container {
+        @include container;
+        @include container-flex-column;
+
+        align-items: center;
+
+        padding: 200px 0;
+
+        color: $white;
+        text-align: center;
+
+        @include media(large) {
+            @include padding-horizontal-20;
+        }
+                
+        h1 {
+            @include reset;
+        }
+
+        h2,
+        p {
+            @include reset-margin-top;
+        }
+
+        form {
+            @include container-flex;
+
+            justify-content: space-between;
+            gap: $gap-value-default * 1.5;
+
+            max-width: 570px;
+
+            input[type="text"],
+            input[type="email"] {
+                @include reset;
+                @include padding-horizontal-20;
+
+                flex: 1 1 270px;
+                min-height: 50px;
+
+                border: 2px solid $dark-gray;
+                border-radius: 3px;
+
+                color: $white;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+
+                background-color: transparent;
+            }
+
+            input[type="submit"] {
+                @include text-transform-uppercase;
+
+                @include reset;
+
+                flex: 1 1 100%;
+
+                padding: 20px 30px;
+                border-radius: 5px;
+
+                background: $green;
+
+                color: $white;
+
+                font-size: 13.3px;
+                line-height: 15px;
+            }
+        }
+    }
+}

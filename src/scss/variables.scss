@@ -1,0 +1,31 @@
+// Colors
+$white: #ffffff;
+$black: #08020d;
+$gray: #e0e0e0;
+$dark-gray: #cacaca;
+$dark: #3c3b3d;
+$green: #34c176;
+$orange: #f89202;
+$purple: #5328a1;
+$red: #95390c;
+
+// Breakpoints
+$breakpoints: (
+    breakpoint-small: 540px,
+    breakpoint-medium: 805px,
+    breakpoint-large: 1239px,
+);
+
+// Font-sises
+$font-size-64: 64px;
+$font-size-56: 56px;
+$font-size-48: 48px;
+$font-size-40: 40px;
+$font-size-32: 32px;
+$font-size-24: 24px;
+$font-size-12-8: 12.8px;
+$font-size-11: 11px;
+
+// Gaps
+
+$gap-value-default: 1rem;
