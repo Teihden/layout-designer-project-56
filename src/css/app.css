@@ -147,7 +147,7 @@ h4.capitalize.bold {
   margin-right: 16px;
 }
 .section-header .container .logo div {
-  color: #ffffff;
+  color: #fff;
 }
 .section-header .container ul {
   box-sizing: border-box;
@@ -168,7 +168,7 @@ h4.capitalize.bold {
   }
 }
 .section-header .container ul li:nth-child(1) {
-  color: #ffffff;
+  color: #fff;
 }
 @media screen and (max-width: 540px) {
   .section-header .container ul li:nth-child(1) {
@@ -177,7 +177,7 @@ h4.capitalize.bold {
 }
 @media screen and (max-width: 540px) {
   .section-header .container ul li:nth-child(3) {
-    color: #ffffff;
+    color: #fff;
   }
 }
 .section-header .container input {
@@ -218,7 +218,7 @@ h4.capitalize.bold {
   flex-direction: column;
   align-items: center;
   padding: 200px 0;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 @media screen and (max-width: 1239px) {
@@ -257,7 +257,7 @@ h4.capitalize.bold {
   min-height: 50px;
   border: 2px solid #cacaca;
   border-radius: 3px;
-  color: #ffffff;
+  color: #fff;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -273,7 +273,7 @@ h4.capitalize.bold {
   padding: 20px 30px;
   border-radius: 5px;
   background: #34c176;
-  color: #ffffff;
+  color: #fff;
   font-size: 13.3px;
   line-height: 15px;
 }

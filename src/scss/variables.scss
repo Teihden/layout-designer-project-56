@@ -1,5 +1,5 @@
 // Colors
-$white: #ffffff;
+$white: #fff;
 $black: #08020d;
 $gray: #e0e0e0;
 $dark-gray: #cacaca;
@@ -11,9 +11,9 @@ $red: #95390c;
 
 // Breakpoints
 $breakpoints: (
-    breakpoint-small: 540px,
-    breakpoint-medium: 805px,
-    breakpoint-large: 1239px,
+  breakpoint-small: 540px,
+  breakpoint-medium: 805px,
+  breakpoint-large: 1239px,
 );
 
 // Font-sises
