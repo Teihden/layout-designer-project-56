@@ -12,7 +12,7 @@ $red: #95390c;
 // Breakpoints
 $breakpoints: (
   breakpoint-small: 540px,
-  breakpoint-medium: 805px,
+  breakpoint-medium: 875px,
   breakpoint-large: 1239px,
 );
 
@@ -28,8 +28,32 @@ $font-size-0: 13.3px;
 $font-size-small: 12.8px;
 $font-size-ultra-small: 11px;
 
-// Length
-
+// General length
+$rem-base: 16px;
 $value-default: 1rem;
 $min-width-container: 350px;
 $max-width-container: 1200px;
+
+// Paddings
+$p-values: (
+  "i": (
+    0,
+  ),
+  "b": (
+    0,
+    20,
+    100,
+    200,
+  ),
+);
+$m-values: (
+  "i": (
+    0,
+  ),
+  "b": (
+    0,
+    30,
+    100,
+  ),
+);
+$directions: "i", "b";

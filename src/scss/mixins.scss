@@ -1,0 +1,133 @@
+// General
+
+@mixin media($breakpoint) {
+  @media screen and (max-width: map.get($breakpoints, breakpoint-#{$breakpoint})) {
+    @content;
+  }
+}
+
+@mixin reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  color: inherit;
+  text-decoration: none;
+
+  list-style: none;
+}
+
+// Container
+
+@mixin container-flex-new(
+  $row-gap: 16,
+  $column-gap: 16,
+  $justify-content: flex-start,
+  $flex-direction: row,
+  $flex-wrap: wrap,
+  $align-items: center
+) {
+  display: flex;
+  flex-flow: $flex-direction $flex-wrap;
+
+  justify-content: $justify-content;
+  align-items: $align-items;
+
+  row-gap: #{$row-gap}px;
+  column-gap: #{$column-gap}px;
+
+  @content;
+}
+
+@mixin container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin container-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Margins and paddings
+
+@mixin p-b-20-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin m-p-class(
+  $first-value,
+  $second-value,
+  $class-name: "p",
+  $direction: "i"
+) {
+  @if $class-name == "p" and $direction == "i" {
+    .p-i-#{$first-value}-#{$second-value} {
+      padding-left: #{$first-value}px;
+      padding-right: #{$second-value}px;
+    }
+  }
+
+  @if $class-name == "p" and $direction == "b" {
+    .p-b-#{$first-value}-#{$second-value} {
+      padding-top: #{$first-value}px;
+      padding-bottom: #{$second-value}px;
+    }
+  }
+
+  @if $class-name == "m" and $direction == "i" {
+    .m-i-#{$first-value}-#{$second-value} {
+      margin-left: #{$first-value}px;
+      margin-right: #{$second-value}px;
+    }
+  }
+
+  @if $class-name == "m" and $direction == "b" {
+    .m-b-#{$first-value}-#{$second-value} {
+      margin-top: #{$first-value}px;
+      margin-bottom: #{$second-value}px;
+    }
+  }
+}
+
+// Buttons
+
+@mixin btn-size(
+  $width: auto,
+  $padding-inline: 30,
+  $padding-block: 20,
+  $border-width: 1,
+  $border-radius: 5,
+  $font-size: $rem-base / 1px
+) {
+  display: block;
+
+  width: $width;
+
+  padding: #{$padding-block}px #{$padding-inline}px #{$padding-block}px #{$padding-inline}px;
+
+  border-width: #{$border-width}px;
+  border-radius: #{$border-radius}px;
+
+  font-size: #{$font-size}px;
+}
+
+@mixin btn-style(
+  $background-color: transparent,
+  $color: inherit,
+  $text-transform: uppercase,
+  $border-color: inherit
+) {
+  border-color: $border-color;
+  border-style: solid;
+
+  background-color: $background-color;
+
+  color: $color;
+  text-transform: $text-transform;
+  text-decoration: none;
+}

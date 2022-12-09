@@ -1,20 +1,3 @@
-@mixin media($breakpoint) {
-  @media screen and (max-width: map.get($breakpoints, breakpoint-#{$breakpoint})) {
-    @content;
-  }
-}
-
-@mixin reset {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-@mixin reset-margin-top {
-  margin-top: 0;
-}
-
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -33,6 +16,8 @@
   src: url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 
+// Containers
+
 body {
   @include reset;
 
@@ -40,69 +25,51 @@ body {
   width: 100%;
 
   color: $dark-gray;
-  font: 400 16px/1.5 Roboto, sans-serif;
+  font: 400 #{$rem-base}/ 1.5 Roboto, sans-serif;
 
   background: $black;
 }
 
-// Text
-
-@mixin text-transform-uppercase {
-  text-transform: uppercase;
-}
-
-// Containers
-
-@mixin container {
+.container {
   box-sizing: border-box;
 
-  width: clamp($min-width-container, 100%, $max-width-container);
+  width: clamp(calc($min-width-container + 40px), 100%, $max-width-container);
   margin: 0 auto;
+
+  @include media(large) {
+    @include p-b-20-20;
+  }
 }
 
-@mixin padding-horizontal-20 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+.section-app .container-flex {
+  @include container-flex-new(16, 144);
 
-@mixin container-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
+  @include media(medium) {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 
-@mixin container-flex-column {
-  display: flex;
-  flex-direction: column;
-}
+  .flex-item-1 {
+    flex: 1 1 350px;
 
-// Buttons
+    max-width: 600px;
+    min-width: 350px;
+  }
 
-.btn {
-  @include text-transform-uppercase;
-
-  display: block;
-
-  padding-inline: 30px;
-  border: 1px solid $white;
-  border-radius: 5px;
-
-  color: inherit;
-  text-decoration: none;
-
-  background-color: transparent;
+  .flex-item-2 {
+    width: 333px;
+  }
 }
 
 // Headings
 
 h1 {
-  @include text-transform-uppercase;
-
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
 
   color: $white;
+  text-transform: uppercase;
 
   @include media(medium) {
     font-size: 30px;
@@ -111,13 +78,12 @@ h1 {
 }
 
 h2 {
-  @include text-transform-uppercase;
-
   font-weight: 700;
   font-size: 38px;
   line-height: 57px;
 
   color: $white;
+  text-transform: uppercase;
 
   @include media(medium) {
     font-size: 18px;
@@ -126,13 +92,12 @@ h2 {
 }
 
 h3 {
-  @include text-transform-uppercase;
-
   font-weight: 400;
   font-size: 24px;
   line-height: 45px;
 
   color: $white;
+  text-transform: uppercase;
 
   @include media(medium) {
     font-weight: 700;
@@ -150,13 +115,12 @@ h3 {
 }
 
 h4 {
-  @include text-transform-uppercase;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
 
   color: $white;
+  text-transform: uppercase;
 
   @include media(small) {
     font-size: 18px;
@@ -166,4 +130,65 @@ h4 {
   &.capitalize.bold {
     text-transform: capitalize;
   }
+}
+
+.index {
+  section header {
+    text-align: center;
+  }
+}
+
+// Buttons
+
+.section-app .btn {
+  @include btn-size(max-content, 40, 16, 0, 32, $font-size-small / 1px);
+  @include btn-style($red, $white, capitalize);
+}
+
+// Margins and paddings
+
+@each $direction, $values in $p-values {
+  @each $first-value in $values {
+    @each $second-value in $values {
+      @include m-p-class($first-value, $second-value, "p", $direction);
+    }
+  }
+}
+
+@each $direction, $values in $m-values {
+  @each $first-value in $values {
+    @each $second-value in $values {
+      @include m-p-class($first-value, $second-value, "m", $direction);
+    }
+  }
+}
+
+@for $a from 0 through 4 {
+  @for $b from 4 through 0 {
+    $first-value: $a * ($rem-base / 1px);
+    $second-value: $b * ($rem-base / 1px);
+
+    @each $direction in $directions {
+      @include m-p-class($first-value, $second-value, "m", $direction);
+    }
+  }
+}
+
+// Text
+
+.t-a-center {
+  text-align: center;
+}
+
+.t-white {
+  color: $white;
+}
+
+// Images
+
+div > img:only-child {
+  width: 100%;
+  height: auto;
+
+  vertical-align: middle;
 }

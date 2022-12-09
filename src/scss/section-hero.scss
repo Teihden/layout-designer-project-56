@@ -4,30 +4,7 @@
   background-size: cover;
 
   .container {
-    @include container;
-    @include container-flex-column;
-
     align-items: center;
-
-    padding: 200px 0;
-
-    color: $white;
-    text-align: center;
-
-    @include media(large) {
-      @include padding-horizontal-20;
-    }
-
-    header {
-      h1 {
-        @include reset;
-      }
-
-      h2,
-      p {
-        @include reset-margin-top;
-      }
-    }
 
     form {
       @include container-flex;
@@ -37,18 +14,20 @@
 
       max-width: 570px;
 
+      margin: 0 auto;
+
       input[type="text"],
       input[type="email"] {
         @include reset;
-        @include padding-horizontal-20;
+        @include p-b-20-20;
 
-        flex: 1 1 270px;
+        flex: 1 1 200px;
+
         min-height: 50px;
 
         border: 2px solid $dark-gray;
         border-radius: 3px;
 
-        color: $white;
         font-weight: 700;
         font-size: 14px;
         line-height: 16px;
@@ -57,15 +36,8 @@
       }
 
       .btn {
-        flex: 1 1 100%;
-
-        padding-block: 20px;
-
-        border: none;
-        background: $green;
-
-        font-size: $font-size-0;
-        line-height: 15px;
+        @include btn-size(100%, 30, 20, 0, 5, $font-size-0 / 1px);
+        @include btn-style($green);
       }
     }
   }

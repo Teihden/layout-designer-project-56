@@ -1,19 +1,5 @@
 .section-news {
   .container {
-    @include container;
-
-    padding-top: 100px;
-
-    @include media(large) {
-      @include padding-horizontal-20;
-    }
-
-    h2 {
-      margin-bottom: $value-default * 3;
-
-      text-align: center;
-    }
-
     .news-container {
       @include container-flex-column;
       row-gap: 65px;
@@ -27,32 +13,21 @@
 
         .news-image {
           box-sizing: border-box;
-
           min-width: $min-width-container;
           width: 575px;
-
-          img {
-            width: 100%;
-            height: auto;
-
-            vertical-align: middle;
-          }
         }
 
         .news-text {
-          box-sizing: border-box;
           flex: 1 1 $min-width-container;
 
-          min-width: $min-width-container;
+          box-sizing: border-box;
           max-width: 575px;
 
           .news-body {
             margin-bottom: $value-default * 1.5;
 
             h3 {
-              @include reset;
-
-              margin-bottom: 30px;
+              margin-block: 0 30px;
 
               font-size: 30px;
 
@@ -72,11 +47,10 @@
               margin-bottom: $value-default * 3;
 
               .author {
-                @include text-transform-uppercase;
-
                 color: $orange;
                 font-size: 12px;
                 line-height: 1.6;
+                text-transform: uppercase;
               }
 
               time {
@@ -86,12 +60,15 @@
             }
 
             .btn {
-              width: max-content;
-
-              padding-block: $value-default;
-
-              font-size: 12px;
-              line-height: 1.6;
+              @include btn-size(
+                max-content,
+                30,
+                $rem-base / 1px,
+                1,
+                5,
+                $font-size-small / 1px
+              );
+              @include btn-style;
             }
           }
         }

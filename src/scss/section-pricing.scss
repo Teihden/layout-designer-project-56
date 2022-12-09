@@ -1,12 +1,5 @@
 .section-pricing {
   .container {
-    @include container;
-
-    padding-top: 100px;
-
-    color: $white;
-    text-align: center;
-
     .backgound-subscribe-1 {
       background-image: url("../images/subscribe_1.png");
       background-position: center;
@@ -25,18 +18,6 @@
       background-size: cover;
     }
 
-    @include media(large) {
-      @include padding-horizontal-20;
-    }
-
-    header {
-      h2 {
-        @include reset;
-
-        margin-bottom: $value-default * 3;
-      }
-    }
-
     .container-flex {
       @include container-flex;
 
@@ -45,6 +26,8 @@
 
       margin-bottom: 40px;
 
+      text-align: center;
+
       .pricing-item {
         box-sizing: border-box;
         flex: 1 1 30%;
@@ -52,7 +35,8 @@
         min-width: $min-width-container;
         max-width: 450px;
 
-        padding: 0 $value-default * 1.5;
+        padding-left: $value-default * 1.5;
+        padding-right: $value-default * 1.5;
 
         border-radius: $value-default;
 
@@ -61,9 +45,9 @@
         }
 
         .pricing-value {
-          @include text-transform-uppercase;
-
           margin-bottom: 40px;
+
+          text-transform: uppercase;
 
           .value {
             font-size: $font-size-7;
@@ -80,15 +64,14 @@
         }
 
         .pricing-footer {
-          margin-bottom: $value-default * 4;
+          margin-block: $value-default * 4;
 
           font-size: $font-size-small;
         }
 
         .btn {
-          margin-bottom: $value-default * 4;
-
-          padding-block: 20px;
+          @include btn-size;
+          @include btn-style;
         }
       }
     }
