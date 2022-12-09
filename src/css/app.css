@@ -2394,6 +2394,9 @@ form .btn {
   font-size: 12.8px;
   line-height: 150%;
 }
+.popular-track .track-info h3 {
+  font-weight: 700;
+}
 .popular-track .track-duration {
   margin-left: auto;
   font-size: 12.8px;
