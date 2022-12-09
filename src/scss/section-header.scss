@@ -2,7 +2,7 @@
   .container {
     @include container-flex;
 
-    row-gap: $value-default;
+    row-gap: 1rem;
     justify-content: space-between;
 
     position: absolute;
@@ -26,7 +26,7 @@
         @include container-flex-column;
 
         align-items: flex-start;
-        row-gap: $value-default;
+        row-gap: 1rem;
       }
     }
 
@@ -42,27 +42,20 @@
       }
 
       img {
-        width: $value-default * 1.5;
-        margin-right: $value-default;
+        width: 1.5rem;
+        margin-right: 1rem;
       }
     }
 
     ul {
-      @include reset;
       @include container-flex;
 
-      column-gap: $value-default * 1.5;
+      column-gap: 1.5rem;
 
       @include media(small) {
         @include container-flex-column;
 
         align-items: flex-start;
-      }
-
-      li {
-        a {
-          @include reset;
-        }
       }
 
       li:nth-child(1) {
@@ -81,8 +74,6 @@
     }
 
     input[type="search"] {
-      @include reset;
-
       width: 248px;
       height: 25px;
 

@@ -28,13 +28,12 @@ $font-size-0: 13.3px;
 $font-size-small: 12.8px;
 $font-size-ultra-small: 11px;
 
-// General length
+// Default length
 $rem-base: 16px;
-$value-default: 1rem;
 $min-width-container: 350px;
-$max-width-container: 1200px;
+$max-width-container: 1240px;
 
-// Paddings
+// Paddings and margins
 $p-values: (
   "i": (
     0,
@@ -53,7 +52,12 @@ $m-values: (
   "b": (
     0,
     30,
+    40,
     100,
   ),
 );
 $directions: "i", "b";
+$layout-elements: "p", "m";
+
+// Backgrounds
+$bg-names: "banner", "subscribe-1", "subscribe-2", "subscribe-3";

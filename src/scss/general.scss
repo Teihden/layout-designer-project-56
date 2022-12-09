@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -16,8 +17,20 @@
   src: url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 
-// Containers
+// Resets
+ul {
+  @include reset;
+}
 
+input {
+  @include reset;
+}
+
+a {
+  @include reset;
+}
+
+// Container
 body {
   @include reset;
 
@@ -34,11 +47,13 @@ body {
   box-sizing: border-box;
 
   width: clamp(calc($min-width-container + 40px), 100%, $max-width-container);
-  margin: 0 auto;
 
-  @include media(large) {
-    @include p-b-20-20;
-  }
+  @include p-b-20-20;
+  margin: 0 auto;
+}
+
+.section-pricing .container-flex {
+  @include container-flex-new(50, 50, center);
 }
 
 .section-app .container-flex {
@@ -61,8 +76,27 @@ body {
   }
 }
 
-// Headings
+.section-footer {
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 15px 40px;
+  }
 
+  .container-flex-24 {
+    @include container-flex-new(0, 24);
+  }
+
+  .container-flex-16 {
+    @include container-flex-new(16, 16);
+
+    @include media(small) {
+      flex-direction: column;
+    }
+  }
+}
+
+// Headings
 h1 {
   font-weight: 700;
   font-size: 60px;
@@ -114,6 +148,7 @@ h3 {
   }
 }
 
+.section-footer h2,
 h4 {
   font-weight: 700;
   font-size: 18px;
@@ -139,14 +174,12 @@ h4 {
 }
 
 // Buttons
-
 .section-app .btn {
   @include btn-size(max-content, 40, 16, 0, 32, $font-size-small / 1px);
   @include btn-style($red, $white, capitalize);
 }
 
 // Margins and paddings
-
 @each $direction, $values in $p-values {
   @each $first-value in $values {
     @each $second-value in $values {
@@ -168,14 +201,20 @@ h4 {
     $first-value: $a * ($rem-base / 1px);
     $second-value: $b * ($rem-base / 1px);
 
-    @each $direction in $directions {
-      @include m-p-class($first-value, $second-value, "m", $direction);
+    @each $layout-element in $layout-elements {
+      @each $direction in $directions {
+        @include m-p-class(
+          $first-value,
+          $second-value,
+          $layout-element,
+          $direction
+        );
+      }
     }
   }
 }
 
 // Text
-
 .t-a-center {
   text-align: center;
 }
@@ -184,8 +223,16 @@ h4 {
   color: $white;
 }
 
-// Images
+// Backgrounds
+.bg-gradient {
+  background: linear-gradient(89.75deg, $purple 32.83%, $red 81.56%);
+}
 
+@each $bg-name in $bg-names {
+  @include bg($bg-name);
+}
+
+// Images
 div > img:only-child {
   width: 100%;
   height: auto;

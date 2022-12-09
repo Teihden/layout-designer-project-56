@@ -1,5 +1,4 @@
 // General
-
 @mixin media($breakpoint) {
   @media screen and (max-width: map.get($breakpoints, breakpoint-#{$breakpoint})) {
     @content;
@@ -20,14 +19,13 @@
 }
 
 // Container
-
 @mixin container-flex-new(
   $row-gap: 16,
   $column-gap: 16,
   $justify-content: flex-start,
   $flex-direction: row,
   $flex-wrap: wrap,
-  $align-items: center
+  $align-items: flex-start
 ) {
   display: flex;
   flex-flow: $flex-direction $flex-wrap;
@@ -35,8 +33,7 @@
   justify-content: $justify-content;
   align-items: $align-items;
 
-  row-gap: #{$row-gap}px;
-  column-gap: #{$column-gap}px;
+  gap: #{$row-gap}px #{$column-gap}px;
 
   @content;
 }
@@ -53,7 +50,6 @@
 }
 
 // Margins and paddings
-
 @mixin p-b-20-20 {
   padding-left: 20px;
   padding-right: 20px;
@@ -95,7 +91,6 @@
 }
 
 // Buttons
-
 @mixin btn-size(
   $width: auto,
   $padding-inline: 30,
@@ -130,4 +125,13 @@
   color: $color;
   text-transform: $text-transform;
   text-decoration: none;
+}
+
+// Backgrounds
+@mixin bg($bg-name) {
+  .bg-#{$bg-name} {
+    background-image: url("../images/#{$bg-name}.png");
+    background-position: center;
+    background-size: cover;
+  }
 }

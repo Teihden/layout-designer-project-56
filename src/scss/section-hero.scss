@@ -1,8 +1,4 @@
 .section-hero {
-  background-image: url("../images/banner.png");
-  background-position: center;
-  background-size: cover;
-
   .container {
     align-items: center;
 
@@ -10,7 +6,7 @@
       @include container-flex;
 
       justify-content: space-between;
-      gap: $value-default * 1.5;
+      gap: 1.5rem;
 
       max-width: 570px;
 
@@ -18,7 +14,6 @@
 
       input[type="text"],
       input[type="email"] {
-        @include reset;
         @include p-b-20-20;
 
         flex: 1 1 200px;
