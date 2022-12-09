@@ -14,11 +14,12 @@
 
       input[type="text"],
       input[type="email"] {
-        @include p-b-20-20;
-
         flex: 1 1 200px;
 
         min-height: 50px;
+
+        padding-left: 20px;
+        padding-left: 20px;
 
         border: 2px solid $dark-gray;
         border-radius: 3px;

@@ -12,14 +12,14 @@
 <body class="index">
 
     <header class="section-header">
-        <div class="container">
-            <div class="container-flex">
-                <div class="logo">
+        <div class="container container-flex-header">
+            <div class="container-flex-logo-nav">
+                <div class="container-flex-logo">
                     <img src="images/logo.svg" alt="logo">
-                    <div>Music Box</div>
+                    <div class="t-white">Music Box</div>
                 </div>
-                <ul>
-                    <li><a href="#">Главная</a></li>
+                <ul  class="container-flex-nav">
+                    <li class="t-white"><a href="#">Главная</a></li>
                     <li><a href="#">Каталог</a></li>
                     <li><a href="artist.html">Исполнители</a></li>
                     <li><a href="#">Контакты</a></li>
@@ -30,7 +30,6 @@
     </header>
 
     <main>
-
         <section id="page-description" class="section-hero bg-banner">
             <div class="container t-white t-a-center p-b-200-200">
                 <header>
@@ -51,7 +50,7 @@
                 <header>
                     <h2 class="m-b-0-48">Формы подписки</h2>
                 </header>
-                <div class="container-flex m-b-0-40">
+                <div class="container-flex-pricing m-b-0-40">
                     <div class="pricing-item bg-subscribe-1">
                         <h3>Бесплатная</h3>
                         <p class="pricing-value"><span class="value">0</span><span class="currency">руб.</span></p>
@@ -83,7 +82,6 @@
                     <h2 class="m-b-0-48">Последние новости</h2>
                 </header>
                 <div class="news-container">
-
                     <article class="news-item">
                         <div class="news-image">
                             <img src="images/Music to Be Murdered By.png" alt="Music to Be Murdered By">
@@ -103,7 +101,6 @@
                             </footer>
                         </div>
                     </article>
-
                     <article class="news-item">
                         <div class="news-image">
                             <img src="images/Ordinary Man.png" alt="Ordinary Man">
@@ -132,7 +129,7 @@
                 <header>
                     <h2 class="m-b-0-64">Мобильное приложение</h2>
                 </header>
-                <div class="container-flex">
+                <div class="container-flex-app">
                     <div class="flex-item-1">
                         <p class="m-b-16-16">Воспользуйтесь нашим мобильным приложением. Оно позволит слушать музыку с любого устройства на базе операционных систем Androind и iOS</p>
                         <p class="m-b-0-16">С тарифом «Премиум» приложение позволяет скачивать все композиции из нашей коллекции. Вы можете слушать музыку даже без интернета.</p>
@@ -145,64 +142,56 @@
             </div>
         </section>
 
-        <footer>
-
-
+        <footer class="section-footer bg-gradient">
+            <div class="container container-grid p-b-48-64">
+                <div class="grid-item">
+                    <h2>О нас</h2>
+                    <ul>
+                        <li><a href="#">История компании</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Особенности</a></li>
+                        <li><a href="#">Пресса</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h2>Поддержка</h2>
+                    <ul>
+                        <li><a href="#">База знаний</a></li>
+                        <li><a href="#">Тарифы</a></li>
+                        <li><a href="#">Мобильное приложение</a></li>
+                        <li><a href="#">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h2>Контакты</h2>
+                    <ul>
+                        <li><a href="#">hello@music.box</a></li>
+                        <li><a href="#">Russia, Moscow. Music Box studio</a></li>
+                        <li><a href="#">+ 7 499 999 99 99</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <h2>Подписывайтесь</h2>
+                    <ul class="container-flex-footer-1">
+                        <li><a href="#"><img src="images/Google+.png" alt="Google+"></a></li>
+                        <li><a href="#"><img src="images/Twitter.png" alt="Twitter"></a></li>
+                        <li><a href="#"><img src="images/Facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="images/Instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="container p-b-32-48">
+                <ul class="container-flex-footer-2">
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Обслуживание</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
         </footer>
-
     </main>
-
-    <footer class="section-footer bg-gradient">
-        <div class="container container-grid p-b-48-64">
-
-            <div class="grid-item">
-                <h2>О нас</h2>
-                <ul>
-                    <li><a href="#">История компании</a></li>
-                    <li><a href="#">Карьера</a></li>
-                    <li><a href="#">Особенности</a></li>
-                    <li><a href="#">Пресса</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h2>Поддержка</h2>
-                <ul>
-                    <li><a href="#">База знаний</a></li>
-                    <li><a href="#">Тарифы</a></li>
-                    <li><a href="#">Мобильное приложение</a></li>
-                    <li><a href="#">Условия использования</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h2>Контакты</h2>
-                <ul>
-                    <li><a href="#">hello@music.box</a></li>
-                    <li><a href="#">Russia, Moscow. Music Box studio</a></li>
-                    <li><a href="#">+ 7 499 999 99 99</a></li>
-                </ul>
-            </div>
-            <div class="grid-item">
-                <h2>Подписывайтесь</h2>
-                <ul class="container-flex-24">
-                    <li><a href="#"><img src="images/Google+.png" alt="Google+"></a></li>
-                    <li><a href="#"><img src="images/Twitter.png" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="images/Facebook.png" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="images/Instagram.png" alt="Instagram"></a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div class="container p-b-32-48">
-            <ul class="container-flex-16">
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Обслуживание</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Поддержка</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-    </footer>
-
 </body>
 
 </html>

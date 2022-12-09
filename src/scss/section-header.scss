@@ -1,9 +1,6 @@
 .section-header {
-  .container {
-    @include container-flex;
-
-    row-gap: 1rem;
-    justify-content: space-between;
+  .container-flex-header {
+    @include container-flex-new($rem-base / 1px, 0, space-between);
 
     position: absolute;
     top: 25px;
@@ -14,62 +11,46 @@
     text-transform: uppercase;
 
     @include media(small) {
-      @include container-flex-column;
-
-      align-items: flex-start;
+      flex-direction: column;
     }
 
-    .container-flex {
-      @include container-flex;
+    .container-flex-logo-nav {
+      @include container-flex-new(
+        $rem-base / 1px,
+        90,
+        space-between,
+        row,
+        wrap,
+        center
+      );
 
       @include media(small) {
-        @include container-flex-column;
-
+        flex-direction: column;
         align-items: flex-start;
-        row-gap: 1rem;
       }
     }
 
-    .logo {
-      @include container-flex;
-
-      margin-right: 90px;
-
-      color: $white;
-
-      @include media(small) {
-        margin-right: 0;
-      }
+    .container-flex-logo {
+      @include container-flex-new(
+        0,
+        $rem-base / 1px,
+        space-between,
+        row,
+        wrap,
+        center
+      );
 
       img {
         width: 1.5rem;
-        margin-right: 1rem;
       }
     }
 
-    ul {
-      @include container-flex;
-
-      column-gap: 1.5rem;
+    .container-flex-nav {
+      @include container-flex-new(0, 24);
 
       @include media(small) {
-        @include container-flex-column;
-
+        flex-direction: column;
         align-items: flex-start;
-      }
-
-      li:nth-child(1) {
-        color: $white;
-
-        @include media(small) {
-          color: $gray;
-        }
-      }
-
-      li:nth-child(3) {
-        @include media(small) {
-          color: $white;
-        }
       }
     }
 

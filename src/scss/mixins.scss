@@ -50,11 +50,6 @@
 }
 
 // Margins and paddings
-@mixin p-b-20-20 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 @mixin m-p-class(
   $first-value,
   $second-value,
