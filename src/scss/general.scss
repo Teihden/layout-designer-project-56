@@ -57,11 +57,11 @@ body {
   margin: 0 auto;
 }
 
-.section-pricing .container-flex-pricing {
+container-flex-pricing {
   @include container-flex-new(50, 50, center);
 }
 
-.section-app .container-flex-app {
+.container-flex-app {
   @include container-flex-new(16, 144);
 
   @include media(medium) {
@@ -84,28 +84,32 @@ body {
   }
 }
 
-.section-footer {
-  .container-grid-footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 15px 40px;
-  }
+.container-grid-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 15px 40px;
+}
 
-  .container-flex-footer-1 {
-    @include container-flex-new(0, 24);
-  }
+.container-flex-footer-1 {
+  @include container-flex-new(0, 24);
+}
 
-  .container-flex-footer-2 {
-    @include container-flex-new(16, 16);
+.container-flex-footer-2 {
+  @include container-flex-new(16, 16);
 
-    @include media(small) {
-      flex-direction: column;
-    }
+  @include media(small) {
+    flex-direction: column;
   }
 }
 
-.section-first .container-flex-first {
+.container-flex-first {
   @include container-flex-new(24, 24);
+}
+
+.container-grid-popular-tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 550px));
+  gap: 25px 50px;
 }
 
 // Headings
@@ -185,6 +189,14 @@ h4 {
   }
 }
 
+// Images
+div > img:only-child {
+  width: 100%;
+  height: auto;
+
+  vertical-align: middle;
+}
+
 // Buttons
 .section-app {
   .btn {
@@ -194,14 +206,26 @@ h4 {
 }
 
 .section-first {
-  .btn-mix {
-    @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
-    @include btn-style($purple);
-  }
+  .btn {
+    &.mix {
+      @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
+      @include btn-style($purple);
+    }
 
-  .btn-fave {
-    @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
-    @include btn-style($red);
+    &.fave {
+      @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
+      @include btn-style($red);
+    }
+
+    img {
+      width: 20px;
+
+      margin-right: 16px;
+
+      vertical-align: middle;
+
+      filter: invert(1);
+    }
   }
 }
 
@@ -256,23 +280,4 @@ h4 {
 
 @each $bg-name in $bg-names {
   @include bg($bg-name);
-}
-
-// Images
-.btn-mix img,
-.btn-fave img {
-  width: 20px;
-
-  margin-right: 16px;
-
-  vertical-align: middle;
-
-  filter: invert(1);
-}
-
-div > img:only-child {
-  width: 100%;
-  height: auto;
-
-  vertical-align: middle;
 }

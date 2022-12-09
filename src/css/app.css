@@ -76,7 +76,7 @@ body {
   margin: 0 auto;
 }
 
-.section-pricing .container-flex-pricing {
+container-flex-pricing {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -84,7 +84,7 @@ body {
   gap: 50px 50px;
 }
 
-.section-app .container-flex-app {
+.container-flex-app {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -92,37 +92,39 @@ body {
   gap: 16px 144px;
 }
 @media screen and (max-width: 875px) {
-  .section-app .container-flex-app {
+  .container-flex-app {
     flex-direction: column-reverse;
     align-items: center;
   }
 }
-.section-app .container-flex-app .flex-item-1 {
+.container-flex-app .flex-item-1 {
   flex: 1 1 350px;
   max-width: 600px;
 }
 @media screen and (max-width: 875px) {
-  .section-app .container-flex-app .flex-item-1 {
+  .container-flex-app .flex-item-1 {
     flex-basis: auto;
   }
 }
-.section-app .container-flex-app .flex-item-2 {
+.container-flex-app .flex-item-2 {
   width: 333px;
 }
 
-.section-footer .container-grid-footer {
+.container-grid-footer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 15px 40px;
 }
-.section-footer .container-flex-footer-1 {
+
+.container-flex-footer-1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0px 24px;
 }
-.section-footer .container-flex-footer-2 {
+
+.container-flex-footer-2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -130,17 +132,23 @@ body {
   gap: 16px 16px;
 }
 @media screen and (max-width: 540px) {
-  .section-footer .container-flex-footer-2 {
+  .container-flex-footer-2 {
     flex-direction: column;
   }
 }
 
-.section-first .container-flex-first {
+.container-flex-first {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 24px 24px;
+}
+
+.container-grid-popular-tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 550px));
+  gap: 25px 50px;
 }
 
 h1 {
@@ -216,6 +224,12 @@ h4.capitalize.bold {
   text-align: center;
 }
 
+div > img:only-child {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .section-app .btn {
   display: block;
   width: max-content;
@@ -231,7 +245,7 @@ h4.capitalize.bold {
   text-decoration: none;
 }
 
-.section-first .btn-mix {
+.section-first .btn.mix {
   display: block;
   width: 200px;
   padding: 20px 30px 20px 30px;
@@ -245,7 +259,7 @@ h4.capitalize.bold {
   text-transform: uppercase;
   text-decoration: none;
 }
-.section-first .btn-fave {
+.section-first .btn.fave {
   display: block;
   width: 200px;
   padding: 20px 30px 20px 30px;
@@ -258,6 +272,12 @@ h4.capitalize.bold {
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+}
+.section-first .btn img {
+  width: 20px;
+  margin-right: 16px;
+  vertical-align: middle;
+  filter: invert(1);
 }
 
 .p-i-0-0 {
@@ -2137,20 +2157,6 @@ h4.capitalize.bold {
   background-size: cover;
 }
 
-.btn-mix img,
-.btn-fave img {
-  width: 20px;
-  margin-right: 16px;
-  vertical-align: middle;
-  filter: invert(1);
-}
-
-div > img:only-child {
-  width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
 .section-header .container-flex-header {
   display: flex;
   flex-flow: row wrap;
@@ -2378,6 +2384,28 @@ form .btn {
 }
 .section-news .container .news-container .news-item:nth-child(2n) {
   flex-direction: row-reverse;
+}
+
+.popular-track .popular-track-image {
+  width: 55px;
+}
+.popular-track .track-info h3,
+.popular-track .track-info p {
+  font-size: 12.8px;
+  line-height: 150%;
+}
+.popular-track .track-duration {
+  margin-left: auto;
+  font-size: 12.8px;
+  line-height: 150%;
+}
+
+.flex-container-popular-track {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px 16px;
 }
 
 /*# sourceMappingURL=app.css.map */
