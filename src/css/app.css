@@ -76,7 +76,7 @@ body {
   margin: 0 auto;
 }
 
-container-flex-pricing {
+.container-flex-pricing {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

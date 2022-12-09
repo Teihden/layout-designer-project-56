@@ -57,7 +57,7 @@ body {
   margin: 0 auto;
 }
 
-container-flex-pricing {
+.container-flex-pricing {
   @include container-flex-new(50, 50, center);
 }
 
