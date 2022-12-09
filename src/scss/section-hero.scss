@@ -1,40 +1,33 @@
-.section-hero {
-  .container {
-    align-items: center;
+form {
+  @include container-flex;
 
-    form {
-      @include container-flex;
+  justify-content: space-between;
+  gap: 1.5rem;
 
-      justify-content: space-between;
-      gap: 1.5rem;
+  max-width: 570px;
 
-      max-width: 570px;
+  margin: 0 auto;
 
-      margin: 0 auto;
+  input[type="text"],
+  input[type="email"] {
+    flex: 1 1 200px;
 
-      input[type="text"],
-      input[type="email"] {
-        flex: 1 1 200px;
+    min-height: 50px;
 
-        min-height: 50px;
+    padding-left: 20px;
 
-        padding-left: 20px;
-        padding-left: 20px;
+    border: 2px solid $dark-gray;
+    border-radius: 3px;
 
-        border: 2px solid $dark-gray;
-        border-radius: 3px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
 
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
+    background-color: transparent;
+  }
 
-        background-color: transparent;
-      }
-
-      .btn {
-        @include btn-size(100%, 30, 20, 0, 5, $font-size-0 / 1px);
-        @include btn-style($green);
-      }
-    }
+  .btn {
+    @include btn-size(100%, 30, 20, 0, 5, $font-size-0 / 1px);
+    @include btn-style($green);
   }
 }

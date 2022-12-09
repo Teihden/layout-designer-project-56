@@ -30,6 +30,10 @@ a {
   @include reset;
 }
 
+button {
+  @include reset;
+}
+
 // Container
 body {
   @include reset;
@@ -69,10 +73,10 @@ body {
     flex: 1 1 350px;
 
     max-width: 600px;
-    
+
     @include media(medium) {
-        flex-basis: auto;
-      }
+      flex-basis: auto;
+    }
   }
 
   .flex-item-2 {
@@ -81,7 +85,7 @@ body {
 }
 
 .section-footer {
-  .container-grid {
+  .container-grid-footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 15px 40px;
@@ -98,6 +102,10 @@ body {
       flex-direction: column;
     }
   }
+}
+
+.section-first .container-flex-first {
+  @include container-flex-new(24, 24);
 }
 
 // Headings
@@ -178,9 +186,23 @@ h4 {
 }
 
 // Buttons
-.section-app .btn {
-  @include btn-size(max-content, 40, 16, 0, 32, $font-size-small / 1px);
-  @include btn-style($red, $white, capitalize);
+.section-app {
+  .btn {
+    @include btn-size(max-content, 40, 16, 0, 32, $font-size-small / 1px);
+    @include btn-style($red, $white, capitalize);
+  }
+}
+
+.section-first {
+  .btn-mix {
+    @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
+    @include btn-style($purple);
+  }
+
+  .btn-fave {
+    @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
+    @include btn-style($red);
+  }
 }
 
 // Margins and paddings
@@ -200,10 +222,10 @@ h4 {
   }
 }
 
-@for $a from 0 through 4 {
-  @for $b from 4 through 0 {
-    $first-value: $a * ($rem-base / 1px);
-    $second-value: $b * ($rem-base / 1px);
+@for $a from 0 through 8 {
+  @for $b from 8 through 0 {
+    $first-value: $a * ($rem-base / 2px);
+    $second-value: $b * ($rem-base / 2px);
 
     @each $layout-element in $layout-elements {
       @each $direction in $directions {
@@ -237,6 +259,17 @@ h4 {
 }
 
 // Images
+.btn-mix img,
+.btn-fave img {
+  width: 20px;
+
+  margin-right: 16px;
+
+  vertical-align: middle;
+
+  filter: invert(1);
+}
+
 div > img:only-child {
   width: 100%;
   height: auto;
