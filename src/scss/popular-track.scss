@@ -1,0 +1,28 @@
+.popular-track {
+  .popular-track-image {
+    width: 55px;
+  }
+
+  .track-info {
+    h3,
+    p {
+      font-size: 12.8px;
+      line-height: 150%;
+    }
+
+    h3 {
+      font-weight: 700;
+    }
+  }
+
+  .track-duration {
+    margin-left: auto;
+
+    font-size: 12.8px;
+    line-height: 150%;
+  }
+}
+
+.flex-container-popular-track {
+  @include container-flex(0, 16, flex-start, row, nowrap, center);
+}
