@@ -147,7 +147,7 @@ h1 {
 
 .section-hero h1 {
   @include media(small) {
-    margin-top: 50px;
+    margin-top: $rem-base * 3;
   }
 }
 
