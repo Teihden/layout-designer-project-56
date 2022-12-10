@@ -1,6 +1,6 @@
 .section-header {
   .container-flex-header {
-    @include container-flex-new($rem-base / 1px, 0, space-between);
+    @include container-flex($rem-base / 1px, 0, space-between);
 
     position: absolute;
     top: 25px;
@@ -15,7 +15,7 @@
     }
 
     .container-flex-logo-nav {
-      @include container-flex-new(
+      @include container-flex(
         $rem-base / 1px,
         90,
         space-between,
@@ -31,7 +31,7 @@
     }
 
     .container-flex-logo {
-      @include container-flex-new(
+      @include container-flex(
         0,
         $rem-base / 1px,
         space-between,
@@ -46,7 +46,7 @@
     }
 
     .container-flex-nav {
-      @include container-flex-new(0, 24);
+      @include container-flex(0, 24);
 
       @include media(small) {
         flex-direction: column;

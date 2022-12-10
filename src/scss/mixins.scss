@@ -19,7 +19,7 @@
 }
 
 // Container
-@mixin container-flex-new(
+@mixin container-flex(
   $row-gap: 16,
   $column-gap: 16,
   $justify-content: flex-start,
@@ -36,17 +36,6 @@
   gap: #{$row-gap}px #{$column-gap}px;
 
   @content;
-}
-
-@mixin container-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-@mixin container-flex-column {
-  display: flex;
-  flex-direction: column;
 }
 
 // Margins and paddings

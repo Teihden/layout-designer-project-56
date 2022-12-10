@@ -58,11 +58,15 @@ body {
 }
 
 .container-flex-pricing {
-  @include container-flex-new(50, 50, center);
+  @include container-flex(50, 50, center);
+}
+
+.container-flex-news {
+  @include container-flex(65, 0, flex-start, column, nowrap, stretch);
 }
 
 .container-flex-app {
-  @include container-flex-new(16, 144);
+  @include container-flex(16, 144);
 
   @include media(medium) {
     flex-direction: column-reverse;
@@ -91,11 +95,11 @@ body {
 }
 
 .container-flex-footer-1 {
-  @include container-flex-new(0, 24);
+  @include container-flex(0, 24);
 }
 
 .container-flex-footer-2 {
-  @include container-flex-new(16, 16);
+  @include container-flex(16, 16);
 
   @include media(small) {
     flex-direction: column;
@@ -103,13 +107,23 @@ body {
 }
 
 .container-flex-first {
-  @include container-flex-new(24, 24);
+  @include container-flex(24, 24);
 }
 
 .container-grid-popular-tracks {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 550px));
   gap: 25px 50px;
+}
+
+.contaner-grid-discography {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 25px 50px;
+
+  @include media(medium) {
+    grid-template-columns: repeat(auto-fill, 138px);
+  }
 }
 
 // Headings
@@ -165,6 +179,7 @@ h3 {
 }
 
 .section-footer h2,
+.section-discography h3,
 h4 {
   font-weight: 700;
   font-size: 18px;
@@ -178,23 +193,23 @@ h4 {
     line-height: 24px;
   }
 
-  &.capitalize.bold {
+  &.capitalize {
     text-transform: capitalize;
-  }
-}
 
-.index {
-  section header {
-    text-align: center;
+    @include media(small) {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 }
 
 // Images
-div > img:only-child {
-  width: 100%;
-  height: auto;
+img {
+  display: block;
+}
 
-  vertical-align: middle;
+.discography-item-image {
+  width: 100%;
 }
 
 // Buttons
@@ -221,8 +236,6 @@ div > img:only-child {
       width: 20px;
 
       margin-right: 16px;
-
-      vertical-align: middle;
 
       filter: invert(1);
     }
@@ -264,6 +277,14 @@ div > img:only-child {
   }
 }
 
+.m-top-0 {
+  margin-top: 0;
+}
+
+.m-bottom-0 {
+  margin-bottom: 0;
+}
+
 // Text
 .t-a-center {
   text-align: center;
@@ -271,6 +292,10 @@ div > img:only-child {
 
 .t-white {
   color: $white;
+}
+
+.t-gray {
+  color: $gray;
 }
 
 // Backgrounds
