@@ -196,6 +196,7 @@ h1 {
   h1 {
     font-size: 30px;
     line-height: 45px;
+    margin-top: 50px;
   }
 }
 
@@ -322,8 +323,10 @@ img {
   text-decoration: none;
 }
 .section-first .btn img {
+  display: inline-block;
   width: 20px;
   margin-right: 16px;
+  vertical-align: middle;
   filter: invert(1);
 }
 
@@ -2401,6 +2404,7 @@ form .btn {
   .news-item .news-text .news-body h3 {
     font-weight: 400;
     font-size: 16px;
+    margin-bottom: 16px;
   }
 }
 .news-item .news-text .news-footer .news-author {

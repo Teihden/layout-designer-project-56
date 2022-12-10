@@ -140,6 +140,8 @@ h1 {
   @include media(medium) {
     font-size: 30px;
     line-height: 45px;
+
+    margin-top: 50px;
   }
 }
 
@@ -237,9 +239,12 @@ img {
     }
 
     img {
+      display: inline-block;
       width: 20px;
 
       margin-right: 16px;
+
+      vertical-align: middle;
 
       filter: invert(1);
     }
