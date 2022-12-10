@@ -2357,6 +2357,11 @@ form .btn {
   line-height: 36px;
   margin-bottom: 200px;
 }
+@media screen and (max-width: 875px) {
+  .pricing-item h3 {
+    line-height: 24px;
+  }
+}
 .pricing-item .pricing-value {
   margin-bottom: 40px;
   text-transform: uppercase;
