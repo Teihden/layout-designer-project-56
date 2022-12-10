@@ -97,7 +97,7 @@ body {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px 144px;
+  gap: 0px 144px;
 }
 @media screen and (max-width: 875px) {
   .container-flex-app {
@@ -197,6 +197,18 @@ h1 {
     font-size: 30px;
     line-height: 45px;
     margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .section-hero h1 {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .section-first h1 {
+    margin-top: 25px;
   }
 }
 
@@ -2275,7 +2287,7 @@ img {
 }
 .section-header .container-flex-header input[type=search] {
   width: 248px;
-  height: 25px;
+  height: 30px;
   padding: 5px 10px;
   background: #3c3b3d;
   border-radius: 50px;
@@ -2292,8 +2304,8 @@ img {
 }
 .section-header .container-flex-header input[type=search]::placeholder {
   color: #757575;
-  line-height: 15px;
   font-size: 13.3px;
+  line-height: 15px;
   text-transform: uppercase;
 }
 
@@ -2342,6 +2354,7 @@ form .btn {
   border-radius: 1rem;
 }
 .pricing-item h3 {
+  line-height: 36px;
   margin-bottom: 200px;
 }
 .pricing-item .pricing-value {

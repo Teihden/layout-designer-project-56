@@ -66,7 +66,7 @@ body {
 }
 
 .container-flex-app {
-  @include container-flex(16, 144);
+  @include container-flex(0, 144);
 
   @include media(medium) {
     flex-direction: column-reverse;
@@ -144,6 +144,22 @@ h1 {
     margin-top: 50px;
   }
 }
+
+.section-hero {
+  h1 {
+    @include media(small) {
+      margin-top: 50px;
+    }
+  }
+}
+
+.section-first {
+    h1 {
+      @include media(small) {
+        margin-top: 25px;
+      }
+    }
+  }
 
 h2 {
   font-weight: 700;
