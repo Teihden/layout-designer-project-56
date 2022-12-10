@@ -19,7 +19,9 @@
 
 // Resets
 ul {
-  @include reset;
+  padding: 0;
+
+  list-style: none;
 }
 
 input {
