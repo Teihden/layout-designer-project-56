@@ -46,7 +46,6 @@
     }
 
     .container-flex-nav {
-      @include reset;
       @include container-flex(0, 24);
 
       @include media(small) {

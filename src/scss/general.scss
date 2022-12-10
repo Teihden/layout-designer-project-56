@@ -19,9 +19,7 @@
 
 // Resets
 ul {
-  padding: 0;
-
-  list-style: none;
+  @include reset;
 }
 
 input {
@@ -207,18 +205,8 @@ h4 {
   color: $white;
   text-transform: uppercase;
 
-  @include media(small) {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
   &.capitalize {
     text-transform: capitalize;
-
-    @include media(small) {
-      font-size: 18px;
-      line-height: 27px;
-    }
   }
 }
 

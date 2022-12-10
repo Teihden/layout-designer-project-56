@@ -14,7 +14,12 @@
   src: url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 ul {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
+  border: none;
+  color: inherit;
+  text-decoration: none;
   list-style: none;
 }
 
@@ -252,29 +257,11 @@ h4 {
   color: #fff;
   text-transform: uppercase;
 }
-@media screen and (max-width: 540px) {
-  .section-footer h2,
-  .section-discography h3,
-  .section-similar-artists h3,
-  h4 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
 .section-footer h2.capitalize,
 .section-discography h3.capitalize,
 .section-similar-artists h3.capitalize,
 h4.capitalize {
   text-transform: capitalize;
-}
-@media screen and (max-width: 540px) {
-  .section-footer h2.capitalize,
-  .section-discography h3.capitalize,
-  .section-similar-artists h3.capitalize,
-  h4.capitalize {
-    font-size: 18px;
-    line-height: 27px;
-  }
 }
 
 img {
@@ -2268,13 +2255,6 @@ img {
   width: 1.5rem;
 }
 .section-header .container-flex-header .container-flex-nav {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-  color: inherit;
-  text-decoration: none;
-  list-style: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
