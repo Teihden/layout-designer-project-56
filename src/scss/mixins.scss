@@ -38,6 +38,14 @@
   @content;
 }
 
+@mixin grid($track-size, $row-gap: 25, $column-gap: 50) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $track-size);
+  gap: #{$row-gap}px #{$column-gap}px;
+
+  @content;
+}
+
 // Margins and paddings
 @mixin m-p-class(
   $first-value,

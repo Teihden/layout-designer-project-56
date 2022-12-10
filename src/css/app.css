@@ -166,7 +166,22 @@ body {
 }
 @media screen and (max-width: 875px) {
   .contaner-grid-discography {
+    display: grid;
     grid-template-columns: repeat(auto-fill, 138px);
+    gap: 25px 50px;
+  }
+}
+
+.contaner-grid-similar-artists {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 25px 50px;
+}
+@media screen and (max-width: 875px) {
+  .contaner-grid-similar-artists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 137px);
+    gap: 25px 50px;
   }
 }
 
@@ -221,6 +236,7 @@ h3.capitalize.bold {
 
 .section-footer h2,
 .section-discography h3,
+.section-similar-artists h3,
 h4 {
   font-weight: 700;
   font-size: 18px;
@@ -231,6 +247,7 @@ h4 {
 @media screen and (max-width: 540px) {
   .section-footer h2,
   .section-discography h3,
+  .section-similar-artists h3,
   h4 {
     font-size: 18px;
     line-height: 24px;
@@ -238,12 +255,14 @@ h4 {
 }
 .section-footer h2.capitalize,
 .section-discography h3.capitalize,
+.section-similar-artists h3.capitalize,
 h4.capitalize {
   text-transform: capitalize;
 }
 @media screen and (max-width: 540px) {
   .section-footer h2.capitalize,
   .section-discography h3.capitalize,
+  .section-similar-artists h3.capitalize,
   h4.capitalize {
     font-size: 18px;
     line-height: 27px;
@@ -254,7 +273,8 @@ img {
   display: block;
 }
 
-.discography-item-image {
+.discography-item-image,
+.similar-item-image {
   width: 100%;
 }
 
