@@ -1,40 +1,43 @@
-// Fonts
+/* Fonts */
 @font-face {
   font-weight: 400;
   font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-weight: 500;
   font-family: Roboto;
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
   src: url("../fonts/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-weight: 700;
   font-family: Roboto;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
   src: url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 
-// Resets
-ul {
-  @include reset;
+/* Resets */
+
+* {
+  box-sizing: border-box;
 }
 
-input {
-  @include reset;
-}
-
-a {
-  @include reset;
-}
-
+ul,
+a,
+input,
 button {
   @include reset;
 }
 
-// Container
+/* Containers */
+html {
+  font-size: $rem-base;
+}
+
 body {
   @include reset;
 
@@ -42,14 +45,12 @@ body {
   width: 100%;
 
   color: $dark-gray;
-  font: 400 #{$rem-base}/ 1.5 Roboto, sans-serif;
+  font: 400 list.slash($rem-base, 1.5) Roboto, sans-serif;
 
   background: $black;
 }
 
 .container {
-  box-sizing: border-box;
-
   width: clamp(calc($min-width-container + 40px), 100%, $max-width-container);
 
   padding-left: 20px;
@@ -58,11 +59,11 @@ body {
 }
 
 .container-flex-pricing {
-  @include container-flex(50, 50, center);
+  @include container-flex(50, 50, normal, center);
 }
 
 .container-flex-news {
-  @include container-flex(65, 0, flex-start, column, nowrap, stretch);
+  @include container-flex(65, 0, normal, normal, column, nowrap);
 }
 
 .container-flex-app {
@@ -73,7 +74,7 @@ body {
     align-items: center;
   }
 
-  .flex-item-1 {
+  .item-flex-1 {
     flex: 1 1 350px;
 
     max-width: 600px;
@@ -81,10 +82,6 @@ body {
     @include media(medium) {
       flex-basis: auto;
     }
-  }
-
-  .flex-item-2 {
-    width: 333px;
   }
 }
 
@@ -128,8 +125,9 @@ body {
   }
 }
 
-// Headings
-h1 {
+/* Headings */
+h1,
+.h1 {
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
@@ -157,7 +155,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.h2 {
   font-weight: 700;
   font-size: 38px;
   line-height: 57px;
@@ -171,7 +170,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.h3 {
   font-weight: 400;
   font-size: 24px;
   line-height: 45px;
@@ -194,11 +194,9 @@ h3 {
   }
 }
 
-.section-footer h2,
-.section-discography h3,
-.section-similar-artists h3,
-h4 {
-  font-weight: 700;
+h4,
+.h4 {
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
 
@@ -207,23 +205,34 @@ h4 {
 
   &.capitalize {
     text-transform: capitalize;
+
+    &.bold {
+      font-weight: 700;
+    }
   }
 }
 
-// Images
+/* Images */
 img {
   display: block;
 }
 
-.discography-item-image,
-.similar-item-image {
+.section-discography img,
+.section-similar-artists img {
   width: 100%;
 }
 
-// Buttons
+/* Buttons */
 .section-app {
   .btn {
-    @include btn-size(max-content, 40, 16, 0, 32, $font-size-small / 1px);
+    @include btn-size(
+      max-content,
+      40,
+      16,
+      0,
+      32,
+      math.div($font-size-small, 1px)
+    );
     @include btn-style($red, $white, capitalize);
   }
 }
@@ -231,72 +240,85 @@ img {
 .section-first {
   .btn {
     &.mix {
-      @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
+      @include btn-size(200px, 30, 20, 0, 5, math.div($font-size-small, 1px));
       @include btn-style($purple);
+      @include container-flex(0, 16, center);
     }
 
     &.fave {
-      @include btn-size(200px, 30, 20, 0, 5, $font-size-small / 1px);
+      @include btn-size(200px, 30, 20, 0, 5, math.div($font-size-small, 1px));
       @include btn-style($red);
+      @include container-flex(0, 16, center);
     }
 
     img {
-      display: inline-block;
       width: 20px;
-
-      margin-right: 16px;
-
-      vertical-align: middle;
 
       filter: invert(1);
     }
   }
 }
 
-// Margins and paddings
-@each $direction, $values in $p-values {
-  @each $first-value in $values {
-    @each $second-value in $values {
-      @include m-p-class($first-value, $second-value, "p", $direction);
+/* Margins and paddings */
+// @each $direction, $values in $p-values {
+//   @each $first-value in $values {
+//     @each $second-value in $values {
+//       @include m-p-class($first-value, $second-value, "p", $direction);
+//     }
+//   }
+// }
+
+// @each $direction, $values in $m-values {
+//   @each $first-value in $values {
+//     @each $second-value in $values {
+//       @include m-p-class($first-value, $second-value, "m", $direction);
+//     }
+//   }
+// }
+
+// @for $a from 0 through 8 {
+//   @for $b from 8 through 0 {
+//     $first-value: $a * math.div($rem-base, 2px);
+//     $second-value: $b * math.div($rem-base, 2px);
+
+//     @each $layout-element in $layout-elements {
+//       @each $direction in $directions {
+//         @include m-p-class(
+//           $first-value,
+//           $second-value,
+//           $layout-element,
+//           $direction
+//         );
+//       }
+//     }
+//   }
+// }
+
+// .m-top-0 {
+//   margin-top: 0;
+// }
+
+// .m-bottom-0 {
+//   margin-bottom: 0;
+// }
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+@each $class-name, $sets in $p-m-values {
+  @each $direction, $values in $sets {
+    @each $value in $values {
+      @include m-p-class-new($value, $class-name, $direction);
     }
   }
 }
 
-@each $direction, $values in $m-values {
-  @each $first-value in $values {
-    @each $second-value in $values {
-      @include m-p-class($first-value, $second-value, "m", $direction);
-    }
-  }
-}
-
-@for $a from 0 through 8 {
-  @for $b from 8 through 0 {
-    $first-value: $a * ($rem-base / 2px);
-    $second-value: $b * ($rem-base / 2px);
-
-    @each $layout-element in $layout-elements {
-      @each $direction in $directions {
-        @include m-p-class(
-          $first-value,
-          $second-value,
-          $layout-element,
-          $direction
-        );
-      }
-    }
-  }
-}
-
-.m-top-0 {
-  margin-top: 0;
-}
-
-.m-bottom-0 {
-  margin-bottom: 0;
-}
-
-// Text
+/* Text */
 .t-a-center {
   text-align: center;
 }
@@ -309,7 +331,7 @@ img {
   color: $gray;
 }
 
-// Backgrounds
+/* Backgrounds */
 .bg-gradient {
   background: linear-gradient(89.75deg, $purple 32.83%, $red 81.56%);
 }

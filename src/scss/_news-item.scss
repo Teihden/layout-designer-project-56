@@ -1,28 +1,26 @@
 .news-item {
-  @include container-flex(50, 50, center);
+  @include container-flex(50, 50, normal, center);
 
   .news-image {
+    flex-basis: 575px;
+
     min-width: $min-width-container;
-    width: 575px;
   }
 
   .news-text {
     flex: 1 1 $min-width-container;
 
-    box-sizing: border-box;
     max-width: 575px;
 
     .news-body {
       margin-bottom: 1.5rem;
 
       h3 {
-        margin-top: 0;
-        margin-bottom: 30px;
-
         font-size: 30px;
 
+        margin: 0 0 30px 0;
+
         @include media(medium) {
-          font-weight: 400;
           font-size: 16px;
 
           margin-bottom: 16px;
@@ -32,20 +30,15 @@
 
     .news-footer {
       .news-author {
-        @include container-flex(0, $rem-base / 1px);
+        @include container-flex(0, math.div($rem-base, 1px));
 
         margin-bottom: 3rem;
 
+        font-size: $font-size-small;
+
         .author {
           color: $orange;
-          font-size: 12px;
-          line-height: 1.6;
           text-transform: uppercase;
-        }
-
-        time {
-          font-size: 12px;
-          line-height: 1.6;
         }
       }
 
@@ -53,10 +46,10 @@
         @include btn-size(
           max-content,
           30,
-          $rem-base / 1px,
+          math.div($rem-base, 1px),
           1,
           5,
-          $font-size-small / 1px
+          math.div($font-size-small, 1px)
         );
         @include btn-style;
       }

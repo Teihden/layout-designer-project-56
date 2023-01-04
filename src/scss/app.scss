@@ -1,9 +1,6 @@
 @use "sass:map";
-@import "variables";
-@import "mixins";
-@import "general";
-@import "section-header";
-@import "form";
-@import "pricing-item";
-@import "news-item";
-@import "popular-track";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@import "variables", "mixins", "general", "section-header", "form",
+  "pricing-item", "news-item", "popular-track";

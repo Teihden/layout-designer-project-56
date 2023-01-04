@@ -6,26 +6,25 @@
 }
 
 @mixin reset {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  border: none;
+  border: 0;
 
   color: inherit;
+  border-style: none;
   text-decoration: none;
 
   list-style: none;
 }
 
-// Container
+// Containers
 @mixin container-flex(
   $row-gap: 16,
   $column-gap: 16,
+  $align-items: flex-start,
   $justify-content: flex-start,
   $flex-direction: row,
-  $flex-wrap: wrap,
-  $align-items: flex-start
+  $flex-wrap: wrap
 ) {
   display: flex;
   flex-flow: $flex-direction $flex-wrap;
@@ -47,38 +46,44 @@
 }
 
 // Margins and paddings
-@mixin m-p-class(
-  $first-value,
-  $second-value,
-  $class-name: "p",
-  $direction: "i"
-) {
-  @if $class-name == "p" and $direction == "i" {
-    .p-i-#{$first-value}-#{$second-value} {
-      padding-left: #{$first-value}px;
-      padding-right: #{$second-value}px;
-    }
-  }
+// @mixin m-p-class(
+//   $first-value,
+//   $second-value,
+//   $class-name: "p",
+//   $direction: "i"
+// ) {
+//   @if $class-name == "p" and $direction == "i" {
+//     .p-i-#{$first-value}-#{$second-value} {
+//       padding-left: #{$first-value}px;
+//       padding-right: #{$second-value}px;
+//     }
+//   }
 
-  @if $class-name == "p" and $direction == "b" {
-    .p-b-#{$first-value}-#{$second-value} {
-      padding-top: #{$first-value}px;
-      padding-bottom: #{$second-value}px;
-    }
-  }
+//   @if $class-name == "p" and $direction == "b" {
+//     .p-b-#{$first-value}-#{$second-value} {
+//       padding-top: #{$first-value}px;
+//       padding-bottom: #{$second-value}px;
+//     }
+//   }
 
-  @if $class-name == "m" and $direction == "i" {
-    .m-i-#{$first-value}-#{$second-value} {
-      margin-left: #{$first-value}px;
-      margin-right: #{$second-value}px;
-    }
-  }
+//   @if $class-name == "m" and $direction == "i" {
+//     .m-i-#{$first-value}-#{$second-value} {
+//       margin-left: #{$first-value}px;
+//       margin-right: #{$second-value}px;
+//     }
+//   }
 
-  @if $class-name == "m" and $direction == "b" {
-    .m-b-#{$first-value}-#{$second-value} {
-      margin-top: #{$first-value}px;
-      margin-bottom: #{$second-value}px;
-    }
+//   @if $class-name == "m" and $direction == "b" {
+//     .m-b-#{$first-value}-#{$second-value} {
+//       margin-top: #{$first-value}px;
+//       margin-bottom: #{$second-value}px;
+//     }
+//   }
+// }
+
+@mixin m-p-class-new($value, $class-name, $direction) {
+  .#{string.slice($class-name, 1, 1)}-#{string.slice($direction, 1, 1)}-#{math.div($value, 1px)} {
+    #{$class-name}-#{$direction}: $value;
   }
 }
 
@@ -89,7 +94,7 @@
   $padding-block: 20,
   $border-width: 1,
   $border-radius: 5,
-  $font-size: $rem-base / 1px
+  $font-size: math.div($rem-base, 1px)
 ) {
   display: block;
 

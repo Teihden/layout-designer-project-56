@@ -6,12 +6,7 @@
   .track-info {
     h3,
     p {
-      font-size: 12.8px;
-      line-height: 150%;
-    }
-
-    h3 {
-      font-weight: 700;
+      font-size: $font-size-small;
     }
   }
 
@@ -24,5 +19,5 @@
 }
 
 .flex-container-popular-track {
-  @include container-flex(0, 16, flex-start, row, nowrap, center);
+  @include container-flex(0, 16, center);
 }

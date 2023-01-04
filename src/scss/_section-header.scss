@@ -1,6 +1,6 @@
 .section-header {
-  .container-flex-header {
-    @include container-flex($rem-base / 1px, 0, space-between);
+  .container-flex {
+    @include container-flex(math.div($rem-base, 1px), 0, normal, space-between);
 
     position: absolute;
     top: 25px;
@@ -14,15 +14,8 @@
       flex-direction: column;
     }
 
-    .container-flex-logo-nav {
-      @include container-flex(
-        $rem-base / 1px,
-        90,
-        space-between,
-        row,
-        wrap,
-        center
-      );
+    &-logo-nav {
+      @include container-flex(math.div($rem-base, 1px), 90, center, space-between);
 
       @include media(small) {
         flex-direction: column;
@@ -30,22 +23,15 @@
       }
     }
 
-    .container-flex-logo {
-      @include container-flex(
-        0,
-        $rem-base / 1px,
-        space-between,
-        row,
-        wrap,
-        center
-      );
+    &-logo {
+      @include container-flex(0, math.div($rem-base, 1px), center, space-between);
 
       img {
         width: 1.5rem;
       }
     }
 
-    .container-flex-nav {
+    &-nav {
       @include container-flex(0, 24);
 
       @include media(small) {

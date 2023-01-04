@@ -1,0 +1,115 @@
+// Colors
+$white: #fff;
+$black: #08020d;
+$gray: #e0e0e0;
+$dark-gray: #cacaca;
+$dark: #3c3b3d;
+$green: #34c176;
+$orange: #f89202;
+$purple: #5328a1;
+$red: #95390c;
+
+// Breakpoints
+$breakpoints: (
+  breakpoint-small: 540px,
+  breakpoint-medium: 875px,
+  breakpoint-large: 1239px,
+);
+
+// Font-sises
+$font-size-7: 64px;
+$font-size-6: 56px;
+$font-size-5: 48px;
+$font-size-4: 40px;
+$font-size-3: 32px;
+$font-size-2: 24px;
+$font-size-1: 16px;
+$font-size-0: 13.3px;
+$font-size-small: 12.8px;
+$font-size-ultra-small: 11px;
+
+// Default length
+$rem-base: 16px;
+$min-width-container: 350px;
+$max-width-container: 1240px;
+
+// Paddings and margins
+// $p-values: (
+//   "i": (
+//     0,
+//   ),
+//   "b": (
+//     0,
+//     20,
+//     100,
+//     200,
+//   ),
+// );
+// $m-values: (
+//   "i": (
+//     0,
+//   ),
+//   "b": (
+//     0,
+//     15,
+//     20,
+//     30,
+//     40,
+//     50,
+//     100,
+//   ),
+// );
+// $directions: "i", "b";
+// $layout-elements: "p", "m";
+
+$p-m-values: (
+  "padding": (
+    "top": (
+      0px,
+      calc($rem-base * 2),
+      calc($rem-base * 3),
+      100px,
+      200px
+    ),
+    "bottom": (
+      0px,
+      calc($rem-base * 1.5),
+      30px,
+      calc($rem-base * 3),
+      calc($rem-base * 4),
+      200px
+    ),
+    "right": (
+      0px
+    ),
+    "left": (
+      0px
+    ),
+  ),
+  "margin": (
+    "top": (
+      0px,
+      15px,
+      calc($rem-base * 3),
+      50px
+    ),
+    "bottom": (
+      0px,
+      20px,
+      calc($rem-base * 1.5),
+      40px,
+      calc($rem-base * 3),
+      100px
+    ),
+    "right": (
+      0px
+    ),
+    "left": (
+      0px
+    ),
+  ),
+);
+
+// Backgrounds
+$bg-names: "banner", "subscribe-1", "subscribe-2", "subscribe-3",
+  "morten-harket";
