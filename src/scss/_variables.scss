@@ -65,48 +65,36 @@ $max-width-container: 1240px;
 $p-m-values: (
   "padding": (
     "top": (
-      0px,
       calc($rem-base * 2),
       calc($rem-base * 3),
       100px,
-      200px
+      200px,
     ),
     "bottom": (
-      0px,
       calc($rem-base * 1.5),
       30px,
       calc($rem-base * 3),
       calc($rem-base * 4),
-      200px
+      200px,
     ),
-    "right": (
-      0px
-    ),
-    "left": (
-      0px
-    ),
+    "right": (),
+    "left": (),
   ),
   "margin": (
     "top": (
-      0px,
       15px,
       calc($rem-base * 3),
-      50px
+      50px,
     ),
     "bottom": (
-      0px,
       20px,
       calc($rem-base * 1.5),
       40px,
       calc($rem-base * 3),
-      100px
+      100px,
     ),
-    "right": (
-      0px
-    ),
-    "left": (
-      0px
-    ),
+    "right": (),
+    "left": (),
   ),
 );
 

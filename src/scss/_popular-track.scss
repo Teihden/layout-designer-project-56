@@ -7,13 +7,14 @@
     h3,
     p {
       font-size: $font-size-small;
+      line-height: 150%;
     }
   }
 
   .track-duration {
     margin-left: auto;
 
-    font-size: 12.8px;
+    font-size: $font-size-small;
     line-height: 150%;
   }
 }

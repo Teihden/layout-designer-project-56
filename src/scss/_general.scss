@@ -184,14 +184,6 @@ h3,
     font-size: 16px;
     line-height: 24px;
   }
-
-  &.capitalize {
-    text-transform: capitalize;
-
-    &.bold {
-      font-weight: 700;
-    }
-  }
 }
 
 h4,
@@ -202,14 +194,14 @@ h4,
 
   color: $white;
   text-transform: uppercase;
+}
 
-  &.capitalize {
-    text-transform: capitalize;
+.capitalize {
+  text-transform: capitalize;
+}
 
-    &.bold {
-      font-weight: 700;
-    }
-  }
+.bold {
+  font-weight: 700;
 }
 
 /* Images */
@@ -294,13 +286,13 @@ img {
 //   }
 // }
 
-// .m-top-0 {
-//   margin-top: 0;
-// }
+.m-t-0 {
+  margin-top: 0;
+}
 
-// .m-bottom-0 {
-//   margin-bottom: 0;
-// }
+.m-b-0 {
+  margin-bottom: 0;
+}
 
 .m-0 {
   margin: 0;
