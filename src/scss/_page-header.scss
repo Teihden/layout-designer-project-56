@@ -1,6 +1,6 @@
-.section-header {
-  .container-flex {
-    @include container-flex(math.div($rem-base, 1px), 0, normal, space-between);
+.page-header {
+  .flex-container {
+    @include flex-container(math.div($rem-base, 1px), 0, normal, space-between);
 
     position: absolute;
     top: 25px;
@@ -14,8 +14,8 @@
       flex-direction: column;
     }
 
-    &-logo-nav {
-      @include container-flex(math.div($rem-base, 1px), 90, center, space-between);
+    &-nav {
+      @include flex-container(math.div($rem-base, 1px), 90, center, space-between);
 
       @include media(small) {
         flex-direction: column;
@@ -24,15 +24,15 @@
     }
 
     &-logo {
-      @include container-flex(0, math.div($rem-base, 1px), center, space-between);
+      @include flex-container(0, math.div($rem-base, 1px), center, space-between);
 
       img {
         width: 1.5rem;
       }
     }
 
-    &-nav {
-      @include container-flex(0, 24);
+    &-list {
+      @include flex-container(0, 24);
 
       @include media(small) {
         font-weight: 700;

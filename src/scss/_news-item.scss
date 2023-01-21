@@ -1,5 +1,5 @@
 .news-item {
-  @include container-flex(50, 50, normal, center);
+  @include flex-container(50, 50, normal, center);
 
   .news-image {
     flex-basis: 575px;
@@ -7,12 +7,12 @@
     min-width: $min-width-container;
   }
 
-  .news-text {
+  .news-body {
     flex: 1 1 $min-width-container;
 
     max-width: 575px;
 
-    .news-body {
+    .news-text {
       margin-bottom: 1.5rem;
 
       h3 {
@@ -30,7 +30,7 @@
 
     .news-footer {
       .news-author {
-        @include container-flex(0, math.div($rem-base, 1px));
+        @include flex-container(0, math.div($rem-base, 1px));
 
         margin-bottom: 3rem;
 

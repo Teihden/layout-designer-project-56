@@ -1,9 +1,9 @@
 .popular-track {
-  .popular-track-image {
+  .popular-track-img {
     width: 55px;
   }
 
-  .track-info {
+  .popular-track-info {
     h3,
     p {
       font-size: $font-size-small;
@@ -20,5 +20,5 @@
 }
 
 .flex-container-popular-track {
-  @include container-flex(0, 16, center);
+  @include flex-container(0, 16, center);
 }

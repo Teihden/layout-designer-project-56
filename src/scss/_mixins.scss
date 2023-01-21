@@ -11,14 +11,16 @@
   border: 0;
 
   color: inherit;
-  border-style: none;
   text-decoration: none;
 
+  font-style: inherit;
   list-style: none;
+
+  border-style: none;
 }
 
 // Containers
-@mixin container-flex(
+@mixin flex-container(
   $row-gap: 16,
   $column-gap: 16,
   $align-items: flex-start,
@@ -37,7 +39,7 @@
   @content;
 }
 
-@mixin grid($track-size, $row-gap: 25, $column-gap: 50) {
+@mixin grid-container($track-size, $row-gap: 25, $column-gap: 50) {
   display: grid;
   grid-template-columns: repeat(auto-fill, $track-size);
   gap: #{$row-gap}px #{$column-gap}px;
@@ -46,42 +48,7 @@
 }
 
 // Margins and paddings
-// @mixin m-p-class(
-//   $first-value,
-//   $second-value,
-//   $class-name: "p",
-//   $direction: "i"
-// ) {
-//   @if $class-name == "p" and $direction == "i" {
-//     .p-i-#{$first-value}-#{$second-value} {
-//       padding-left: #{$first-value}px;
-//       padding-right: #{$second-value}px;
-//     }
-//   }
-
-//   @if $class-name == "p" and $direction == "b" {
-//     .p-b-#{$first-value}-#{$second-value} {
-//       padding-top: #{$first-value}px;
-//       padding-bottom: #{$second-value}px;
-//     }
-//   }
-
-//   @if $class-name == "m" and $direction == "i" {
-//     .m-i-#{$first-value}-#{$second-value} {
-//       margin-left: #{$first-value}px;
-//       margin-right: #{$second-value}px;
-//     }
-//   }
-
-//   @if $class-name == "m" and $direction == "b" {
-//     .m-b-#{$first-value}-#{$second-value} {
-//       margin-top: #{$first-value}px;
-//       margin-bottom: #{$second-value}px;
-//     }
-//   }
-// }
-
-@mixin m-p-class-new($value, $class-name, $direction) {
+@mixin m-p-class($value, $class-name, $direction) {
   .#{string.slice($class-name, 1, 1)}-#{string.slice($direction, 1, 1)}-#{math.div($value, 1px)} {
     #{$class-name}-#{$direction}: $value;
   }

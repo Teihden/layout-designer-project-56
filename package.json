@@ -1,7 +1,7 @@
 {
   "name": "layout-designer-project-56",
   "version": "1.0.0",
-  "description": "Second project",
+  "description": "Project Music Box (Hexlet's educational project - a two-page website)",
   "repository": {
     "type": "git",
     "url": "https://github.com/Teihden/layout-designer-project-56"
@@ -20,11 +20,6 @@
   },
   "scripts": {
     "deploy": "surge --project ./src --domain https://mus-box.surge.sh"
-  },
-  "git": {
-    "scripts": {
-      "pre-push": "npm run deploy"
-    }
   },
   "author": "Teihden",
   "license": "ISC",

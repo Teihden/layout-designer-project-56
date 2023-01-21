@@ -1,5 +1,5 @@
 form {
-  @include container-flex(math.div($rem-base * 1.5, 1px), math.div($rem-base * 1.5, 1px));
+  @include flex-container(math.div($rem-base * 1.5, 1px), math.div($rem-base * 1.5, 1px));
 
   max-width: 570px;
 
