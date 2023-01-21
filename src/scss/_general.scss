@@ -32,9 +32,8 @@ address {
   @include reset;
 }
 
-a, button {
-  cursor: pointer;
-}
+a,
+button { cursor: pointer; }
 
 /* Containers */
 html {
