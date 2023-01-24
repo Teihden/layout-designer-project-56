@@ -28,35 +28,33 @@
       }
     }
 
-    .news-footer {
-      .news-author {
-        @include flex-container(0, math.div($rem-base, 1px));
+    .news-author {
+      @include flex-container(0, math.div($rem-base, 1px));
 
-        margin-bottom: 3rem;
+      margin-bottom: 3rem;
 
-        font-size: $font-size-small;
+      font-size: $font-size-small;
 
-        .author {
-          color: $orange;
-          text-transform: uppercase;
-        }
+      .author {
+        color: $orange;
+        text-transform: uppercase;
       }
+    }
 
-      .btn {
-        @include btn-size(
-          max-content,
-          30,
-          math.div($rem-base, 1px),
-          1,
-          5,
-          math.div($font-size-small, 1px)
-        );
-        @include btn-style;
-      }
+    .btn {
+      @include btn-size(
+        max-content,
+        30,
+        math.div($rem-base, 1px),
+        1,
+        5,
+        math.div($font-size-small, 1px)
+      );
+      @include btn-style;
     }
   }
 }
 
-.news-item:nth-child(2n) {
+.news-item:nth-child(3n) {
   flex-direction: row-reverse;
 }
