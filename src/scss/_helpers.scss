@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Helpers classes
+   ========================================================================== */
+
+/* Width and height */
+
+.w-100 {
+  width: 100%;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Margins and paddings */
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+@each $class-name, $sets in $p-m-values {
+  @each $direction, $values in $sets {
+    @each $value in $values {
+      @include m-p-class($value, $class-name, $direction);
+    }
+  }
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+
+.m-t-sm-25 {
+  @include media(small) {
+    margin-top: 25px;
+  }
+}
+
+.m-t-sm-48 {
+  @include media(small) {
+    margin-top: 48px;
+  }
+}
+
+/* Border-radius */
+.b-r-16 {
+  border-radius: 16px;
+}
+
+.b-r-50 {
+  border-radius: 50px;
+}
+
+/* Font-sizes */
+@each $class-name, $value in $f-s-values {
+  @include f-s-class($value, $class-name);
+}
+
+/* Text-color */
+@each $class-name, $value in $color-values {
+  @include t-class($value, $class-name);
+}
+
+/* Text-align */
+.a-left {
+  text-align: left;
+}
+
+.a-center {
+  text-align: center;
+}
+
+/* Vertical-align */
+
+.v-align-top {
+  vertical-align: top;
+}
+
+.v-align-middle {
+  vertical-align: middle;
+}
+
+/* Text-transform */
+.t-uppercase {
+  text-transform: uppercase;
+}
+
+.t-capitalize {
+  text-transform: capitalize;
+}
+
+/* Text-weight */
+.t-normal {
+  font-weight: 400;
+}
+
+.t-bold {
+  font-weight: 700;
+}
+
+/* Backgrounds */
+.bg-gradient {
+  background: linear-gradient(89.75deg, map.get($color-values, "purple") 32.83%, map.get($color-values, "red") 81.56%);
+}
+
+@each $bg-name in $bg-names {
+  @include bg($bg-name);
+}
+
+@each $class-name, $value in $color-values {
+  @include bg-class($value, $class-name);
+}
+
+/* Display properties */
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* Filter's properties */
+.invert {
+  filter: invert(1);
+}
+
+/* Flexible Box Layout properties */
+.a-i-center {
+  align-items: center;
+}
+
+/* Visually-hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

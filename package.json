@@ -10,6 +10,8 @@
   "devDependencies": {
     "git-scripts": "^0.6.4",
     "htmlhint": "^1.1.4",
+    "purgecss": "^5.0.0",
+    "sass": "^1.57.1",
     "stylelint": "^14.16.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^24.0.0",

@@ -1,53 +1,37 @@
 .news-item {
-  @include flex-container(50, 50, normal, center);
+  @include flex-container(50px, 50px, normal, center);
+}
 
-  .news-image {
-    flex-basis: 575px;
+.news-image {
+  flex-basis: 575px;
 
-    min-width: $min-width-container;
+  min-width: $min-width-container;
+}
+
+.news-body {
+  flex: 1 1 $min-width-container;
+
+  max-width: 575px;
+
+  h3 {
+    font-size: 30px;
+
+    @include media(medium) {
+      font-size: map.get($f-s-values, "f-s-1");
+
+      margin-bottom: 1rem;
+    }
   }
+}
 
-  .news-body {
-    flex: 1 1 $min-width-container;
+.news-footer {
+  @include flex-container(0, 1rem);
 
-    max-width: 575px;
+  font-size: map.get($f-s-values, "f-s-small");
 
-    h3 {
-      font-size: 30px;
-
-      margin: 0 0 30px;
-
-      @include media(medium) {
-        font-size: 16px;
-
-        margin-bottom: 16px;
-      }
-    }
-
-    .news-author {
-      @include flex-container(0, math.div($rem-base, 1px));
-
-      margin-bottom: 3rem;
-
-      font-size: $font-size-small;
-
-      .author {
-        color: $orange;
-        text-transform: uppercase;
-      }
-    }
-
-    .btn {
-      @include btn-size(
-        max-content,
-        30,
-        math.div($rem-base, 1px),
-        1,
-        5,
-        math.div($font-size-small, 1px)
-      );
-      @include btn-style;
-    }
+  .news-author {
+    color: map.get($color-values, "orange");
+    text-transform: uppercase;
   }
 }
 

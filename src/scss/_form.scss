@@ -1,29 +1,27 @@
-form {
-  @include flex-container(math.div($rem-base * 1.5, 1px), math.div($rem-base * 1.5, 1px));
+.hero-form {
+  @include flex-container(1.5rem, 1.5rem);
 
   max-width: 570px;
-
   margin: 0 auto;
+}
 
-  input[type="text"],
-  input[type="email"] {
-    flex: 1 1 200px;
+.hero-form-name,
+.hero-form-email {
+  flex: 1 1 200px;
+  min-height: 50px;
+  padding-left: 20px;
 
-    min-height: 50px;
-
-    padding-left: 20px;
-
-    border: 2px solid $dark-gray;
-    border-radius: 3px;
-
-    font-weight: 700;
+  &::placeholder {
+    font-family: Roboto, sans-serif;
     font-size: 14px;
-
-    background-color: transparent;
+    font-weight: 700;
+    line-height: 16px;
+    color: map.get($color-values, "white");
   }
+}
 
-  .btn {
-    @include btn-size(100%, 30, 20, 0, 5, math.div($font-size-0, 1px));
-    @include btn-style($green);
-  }
+.input-transparent {
+  border-radius: 3px;
+  border: 2px solid map.get($color-values, "dark-gray");
+  background-color: transparent;
 }

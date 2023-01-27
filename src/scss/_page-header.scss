@@ -1,70 +1,62 @@
 .page-header {
-  .flex-container {
-    @include flex-container(math.div($rem-base, 1px), 0, normal, space-between);
+  font-size: map.get($f-s-values, "f-s-ultra-small");
+  text-transform: uppercase;
+}
 
-    position: absolute;
-    top: 25px;
-    right: 0;
-    left: 0;
+.header-flex-container {
+  @include flex-container(1rem, 0, normal, space-between);
 
-    font-size: $font-size-ultra-small;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  left: 0;
+
+  @include media(small) {
+    flex-direction: column;
+  }
+}
+
+.header-nav-flex-container {
+  @include flex-container(1rem, 90px, center, space-between);
+
+  @include media(small) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.header-logo-flex-container {
+  @include flex-container(0, 1rem, center, space-between);
+}
+
+.header-anchors-flex-container {
+  @include flex-container(0, 24px);
+
+  @include media(small) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-weight: 700;
+  }
+}
+
+.header-search {
+  width: 248px;
+  height: 30px;
+  padding: 5px 10px;
+
+  @include media(medium) {
+    width: 500px;
+  }
+
+  @include media(small) {
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: map.get($color-values, "sonic-silver");
+    font-size: 13.3px;
+    line-height: 15px;
     text-transform: uppercase;
-
-    @include media(small) {
-      flex-direction: column;
-    }
-
-    &-nav {
-      @include flex-container(math.div($rem-base, 1px), 90, center, space-between);
-
-      @include media(small) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    &-logo {
-      @include flex-container(0, math.div($rem-base, 1px), center, space-between);
-
-      img {
-        width: 1.5rem;
-      }
-    }
-
-    &-list {
-      @include flex-container(0, 24);
-
-      @include media(small) {
-        font-weight: 700;
-
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    input[type="search"] {
-      width: 248px;
-      height: 30px;
-
-      padding: 5px 10px;
-
-      background: $dark;
-      border-radius: 50px;
-
-      @include media(medium) {
-        width: 500px;
-      }
-
-      @include media(small) {
-        width: 100%;
-      }
-
-      &::placeholder {
-        color: #757575;
-        font-size: $font-size-0;
-        line-height: 15px;
-        text-transform: uppercase;
-      }
-    }
   }
 }

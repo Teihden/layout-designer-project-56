@@ -21,8 +21,8 @@
 
 // Containers
 @mixin flex-container(
-  $row-gap: 16,
-  $column-gap: 16,
+  $row-gap: 16px,
+  $column-gap: 16px,
   $align-items: flex-start,
   $justify-content: flex-start,
   $flex-direction: row,
@@ -34,61 +34,90 @@
   justify-content: $justify-content;
   align-items: $align-items;
 
-  gap: #{$row-gap}px #{$column-gap}px;
+  gap: #{$row-gap} #{$column-gap};
 
   @content;
 }
 
-@mixin grid-container($track-size, $row-gap: 25, $column-gap: 50) {
+@mixin grid-container($track-size, $row-gap: 25px, $column-gap: 50px) {
   display: grid;
   grid-template-columns: repeat(auto-fill, $track-size);
-  gap: #{$row-gap}px #{$column-gap}px;
+  gap: #{$row-gap} #{$column-gap};
 
   @content;
 }
 
 // Margins and paddings
 @mixin m-p-class($value, $class-name, $direction) {
-  .#{string.slice($class-name, 1, 1)}-#{string.slice($direction, 1, 1)}-#{math.div($value, 1px)} {
-    #{$class-name}-#{$direction}: $value;
+  @if math.is-unitless($value) {
+    .#{string.slice($class-name, 1, 1)}-#{string.slice($direction, 1, 1)}-#{$value} {
+      #{$class-name}-#{$direction}: $value;
+    }
+  } @else if math.unit($value) == "px" {
+    .#{string.slice($class-name, 1, 1)}-#{string.slice($direction, 1, 1)}-#{math.div($value, 1px)} {
+      #{$class-name}-#{$direction}: $value;
+    }
+  } @else if math.unit($value) == "rem" {
+    $value: math.div($value * $rem-base, 1rem);
+    .#{string.slice($class-name, 1, 1)}-#{string.slice($direction, 1, 1)}-#{math.div($value, 1px)} {
+      #{$class-name}-#{$direction}: $value;
+    }
+  }
+}
+
+// Font-sizes
+@mixin f-s-class($value, $class-name) {
+  .#{$class-name} {
+    font-size: $value;
+  }
+}
+
+// Text-color
+@mixin t-class($value, $class-name) {
+  .t-#{$class-name} {
+    color: $value;
   }
 }
 
 // Buttons
-@mixin btn-size(
+@mixin btn-structure(
   $width: auto,
-  $padding-inline: 30,
-  $padding-block: 20,
-  $border-width: 1,
-  $border-radius: 5,
-  $font-size: math.div($rem-base, 1px)
+  $height: auto,
+  $padding-inline: 30px,
+  $padding-block: 20px
 ) {
   display: block;
 
   width: $width;
 
-  padding: #{$padding-block}px #{$padding-inline}px #{$padding-block}px #{$padding-inline}px;
-
-  border-width: #{$border-width}px;
-  border-radius: #{$border-radius}px;
-
-  font-size: #{$font-size}px;
+  padding: #{$padding-block} #{$padding-inline} #{$padding-block} #{$padding-inline};
 }
 
 @mixin btn-style(
+  $font-size: 12.8,
   $background-color: transparent,
+  $border-width: 0,
+  $border-radius: 5,
   $color: inherit,
   $text-transform: uppercase,
-  $border-color: inherit
+  $border-color: currentColor,
+  $border-style: solid
 ) {
+  border-width: #{$border-width}px;
+  border-radius: #{$border-radius}px;
   border-color: $border-color;
-  border-style: solid;
+  border-style: $border-style;
 
-  background-color: $background-color;
-
+  @if math.is-unitless($font-size) {
+    font-size: #{$font-size}px;
+  } @else {
+    font-size: #{$font-size};
+  }
   color: $color;
   text-transform: $text-transform;
   text-decoration: none;
+
+  background-color: $background-color;
 }
 
 // Backgrounds
@@ -97,5 +126,11 @@
     background-image: url("../images/#{$bg-name}.png");
     background-position: center;
     background-size: cover;
+  }
+}
+
+@mixin bg-class($value, $class-name) {
+  .bg-#{$class-name} {
+    background-color: $value;
   }
 }

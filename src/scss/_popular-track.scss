@@ -1,24 +1,10 @@
-.popular-track {
-  .popular-track-img {
-    width: 55px;
-  }
 
-  .popular-track-info {
-    h3,
-    p {
-      font-size: $font-size-small;
-      line-height: 150%;
-    }
-  }
-
-  .track-duration {
-    margin-left: auto;
-
-    font-size: $font-size-small;
-    line-height: 150%;
-  }
+.popular-track-title {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
 }
 
-.flex-container-popular-track {
-  @include flex-container(0, 16, center);
+.popular-track-flex-container {
+  @include flex-container(0, 16px, center);
 }

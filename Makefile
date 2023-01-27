@@ -6,4 +6,10 @@ lint:
 	npx htmlhint ./src/*.html
 
 deploy:
-	surge --project ./src --domain https://mus-box.surge.sh
+	npx surge --project ./src --domain https://mus-box.surge.sh
+
+sass:
+	npx sass --watch --style=compressed src/scss/:src/css/
+
+purge:
+	npx purgecss --css css/app.css --content src/*.html
