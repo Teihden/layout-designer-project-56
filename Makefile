@@ -1,5 +1,5 @@
 install:
-	npm install
+	npm i
 
 lint:
 	npx stylelint ./src/scss/*.scss

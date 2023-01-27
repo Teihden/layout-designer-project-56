@@ -3,7 +3,6 @@
    ========================================================================== */
 
 /* Width and height */
-
 .w-100 {
   width: 100%;
 }
@@ -74,7 +73,6 @@
 }
 
 /* Vertical-align */
-
 .v-align-top {
   vertical-align: top;
 }
@@ -103,7 +101,12 @@
 
 /* Backgrounds */
 .bg-gradient {
-  background: linear-gradient(89.75deg, map.get($color-values, "purple") 32.83%, map.get($color-values, "red") 81.56%);
+  background:
+    linear-gradient(
+      89.75deg,
+      map.get($color-values, "purple") 32.83%,
+      map.get($color-values, "red") 81.56%
+    );
 }
 
 @each $bg-name in $bg-names {

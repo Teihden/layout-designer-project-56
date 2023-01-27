@@ -12,7 +12,7 @@ https://mus-box.surge.sh
 
 ```bash
 # Install dependencies
-make i
+make install
 ```
 
 ## CLI
