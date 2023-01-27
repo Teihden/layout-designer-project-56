@@ -24,7 +24,8 @@ make lint
 # Deploys directory `src/` to Surge
 make deploy
 
-# Compiles source Sass into CSS, automatically recompiles CSS as it watches the source code for changes
+# Compiles source Sass into CSS, automatically recompiles CSS
+# as it watches the source code for changes
 make sass
 
 # Runs PurgeCSS to remove CSS that is unused by `*.html`
