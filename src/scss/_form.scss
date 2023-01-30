@@ -12,16 +12,10 @@
   padding-left: 20px;
 
   &::placeholder {
-    font-family: Roboto, sans-serif;
+    font-family: inherit;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     color: map.get($color-values, "white");
   }
-}
-
-.input-transparent {
-  border-radius: 3px;
-  border: 2px solid map.get($color-values, "dark-gray");
-  background-color: transparent;
 }

@@ -24,10 +24,19 @@ make lint
 # Deploys directory `src/` to Surge
 make deploy
 
+# Compiles source Sass into CSS
+make sass
+
 # Compiles source Sass into CSS, automatically recompiles CSS
 # as it watches the source code for changes
-make sass
+make watch
 
 # Runs PurgeCSS to remove CSS that is unused by `*.html`
 make purge
+
+# Runs Autoprefixer on the compiled CSS
+make prefix
+
+# Runs Stylelint, HTMLHint, Sass, PurgeCSS, Autoprefixer in sequential order
+make build
 ```

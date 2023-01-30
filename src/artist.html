@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body class="min-vh-100 t-gray">
+<body class="t-gray">
 
   <header class="page-header">
     <div class="container header-flex-container">
@@ -19,27 +19,27 @@
           <span class="t-white">Music Box</span>
         </a>
         <ul class="header-anchors-flex-container">
-          <li class="t-dark-gray">
-            <a href="index.html">Главная</a>
+          <li>
+            <a class="header-link t-dark-gray" href="index.html">Главная</a>
           </li>
-          <li class="t-dark-gray">
-            <a href="#no_scroll">Каталог</a>
+          <li>
+            <a class="header-link t-dark-gray" href="#no_scroll">Каталог</a>
           </li>
-          <li class="t-white">
-            <a>Исполнители</a>
+          <li>
+            <a class="header-link t-white">Исполнители</a>
           </li>
-          <li class="t-dark-gray">
-            <a href="#no_scroll">Контакты</a>
+          <li>
+            <a class="header-link t-dark-gray" href="#no_scroll">Контакты</a>
           </li>
         </ul>
       </nav>
       <label class="visually-hidden" for="header-search">Поиск</label>
-      <input class="header-search b-r-50 bg-dark" id="header-search" name="search" type="search" placeholder="Поиск&hellip;" required>
+      <input class="header-search input-dark" id="header-search" name="search" type="search" placeholder="Поиск&hellip;" required>
     </div>
   </header>
 
   <main>
-    <section id="page-description" class="current-artist bg-morten-harket">
+    <section id="page-description" class="bg-current-artist">
       <div class="container t-white p-t-200 p-b-200">
         <h1 class="m-t-50 m-t-sm-25 m-b-0">Morten Harket</h1>
         <p>24 875 поклонников</p>
@@ -57,12 +57,12 @@
     </section>
 
     <section>
-      <div id="page-popular-track" class="container p-t-100">
+      <div id="page-popular-track" class="popular-tracks container p-t-100">
         <h2 class="m-t-0 m-b-48">Популярные треки</h2>
         <ul class="popular-tracks-grid-container">
           <li>
             <a class="popular-track-flex-container f-s-small" href="#no_scroll">
-              <img src="images/Wild-Seed.png" width="55" height="55" alt="Альбом Wild Seed.">
+              <img src="images/Wild-Seed.png" width="55" height="55" loading="lazy" alt="Альбом Wild Seed.">
               <div>
                 <h3 class="popular-track-title m-0">Spanish Step</h3>
                 <p class="m-0">Morten Harket</p>
@@ -72,7 +72,7 @@
           </li>
           <li>
             <a class="popular-track-flex-container f-s-small" href="#no_scroll">
-              <img src="images/Brother.png" width="55" height="55" alt="Альбом Brother.">
+              <img src="images/Brother.png" width="55" height="55" loading="lazy" alt="Альбом Brother.">
               <div>
                 <h3 class="popular-track-title m-0">Brother</h3>
                 <p class="m-0">Morten Harket</p>
@@ -82,7 +82,7 @@
           </li>
           <li>
             <a class="popular-track-flex-container f-s-small" href="#no_scroll">
-              <img src="images/Letter-from-Egypt.png" width="55" height="55" alt="Альбом Letter from Egypt.">
+              <img src="images/Letter-from-Egypt.png" width="55" height="55" loading="lazy" alt="Альбом Letter from Egypt.">
               <div>
                 <h3 class="popular-track-title m-0">Darkspace</h3>
                 <p class="m-0">Morten Harket</p>
@@ -92,7 +92,7 @@
           </li>
           <li>
             <a class="popular-track-flex-container f-s-small" href="#no_scroll">
-              <img src="images/Letter-from-Egypt.png" width="55" height="55" alt="Альбом Letter from Egypt.">
+              <img src="images/Letter-from-Egypt.png" width="55" height="55" loading="lazy" alt="Альбом Letter from Egypt.">
               <div>
                 <h3 class="popular-track-title m-0">With You - With Me</h3>
                 <p class="m-0">Morten Harket</p>
@@ -102,7 +102,7 @@
           </li>
           <li>
             <a class="popular-track-flex-container f-s-small" href="#no_scroll">
-              <img src="images/Wild-Seed.png" width="55" height="55" alt="Альбом Wild Seed.">
+              <img src="images/Wild-Seed.png" width="55" height="55" loading="lazy" alt="Альбом Wild Seed.">
               <div>
                 <h3 class="popular-track-title m-0">Brodsky Tune</h3>
                 <p class="m-0">Morten Harket</p>
@@ -112,7 +112,7 @@
           </li>
           <li>
             <a class="popular-track-flex-container f-s-small" href="#no_scroll">
-              <img src="images/Out-of-My-Hands.png" width="55" height="55" alt="Альбом Out of My Hands.">
+              <img src="images/Out-of-My-Hands.png" width="55" height="55" loading="lazy" alt="Альбом Out of My Hands.">
               <div>
                 <h3 class="popular-track-title m-0">Burn Money Burn</h3>
                 <p class="m-0">Morten Harket</p>
@@ -124,48 +124,48 @@
       </div>
     </section>
 
-    <section class="discography">
-      <div id="page-discography" class="container p-t-100">
+    <section>
+      <div id="page-discography" class="discography container p-t-100">
         <h2 class="m-t-0 m-b-48">Дискография</h2>
         <ul class="discography-grid-container">
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Brother.png" alt="Альбом Brother.">
+              <img class="w-100" src="images/Brother.png" loading="lazy" alt="Альбом Brother.">
               <h3 class="h4-bold-capitalize m-b-0">Brother</h3>
               <p class="m-0">2014</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100"  src="images/Out-of-My-Hands.png" alt="Альбом Out of My Hands.">
+              <img class="w-100"  src="images/Out-of-My-Hands.png" loading="lazy" alt="Альбом Out of My Hands.">
               <h3 class="h4-bold-capitalize m-b-0">Out Of My Hands</h3>
               <p class="m-0">2012</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100"  src="images/Letter-from-Egypt.png" alt="Альбом Letter from Egypt.">
+              <img class="w-100"  src="images/Letter-from-Egypt.png" loading="lazy" alt="Альбом Letter from Egypt.">
               <h3 class="h4-bold-capitalize m-b-0">Letter From Egypt</h3>
               <p class="m-0">2008</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100"  src="images/Vogts-Villa.png" alt="Альбом Vogts Villa.">
+              <img class="w-100"  src="images/Vogts-Villa.png" loading="lazy" alt="Альбом Vogts Villa.">
               <h3 class="h4-bold-capitalize m-b-0">Vogts Vills</h3>
               <p class="m-0">1996</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Wild-Seed.png" alt="Альбом Wild Seed.">
+              <img class="w-100" src="images/Wild-Seed.png" loading="lazy" alt="Альбом Wild Seed.">
               <h3 class="h4-bold-capitalize m-b-0">Wild Seed</h3>
               <p class="m-0">1995</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Poetenes-Evangelium.png" alt="Альбом Poetenes Evangelium.">
+              <img class="w-100" src="images/Poetenes-Evangelium.png" loading="lazy" alt="Альбом Poetenes Evangelium.">
               <h3 class="h4-bold-capitalize m-b-0">Poetenes Evangelium</h3>
               <p class="m-0">1993</p>
             </a>
@@ -174,62 +174,62 @@
       </div>
     </section>
 
-    <section class="similar-artists">
-      <div id="page-similar" class="container p-t-100 m-b-100">
+    <section>
+      <div id="page-similar" class="similar-artists container p-t-100 m-b-100">
         <h2 class="m-t-0 m-b-48">Похожие исполнители</h2>
         <ul class="similar-artists-grid-container a-center">
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/A-ha.png" alt="Артист A-ha.">
+              <img class="w-100" src="images/A-ha.png" loading="lazy" alt="Артист A-ha.">
               <h3 class="h4-bold-capitalize m-b-0">A-Ha</h3>
               <p class="m-0">417 086 поклонников</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Tears-For-Fears.png" alt="Артист Tears For Fears.">
+              <img class="w-100" src="images/Tears-For-Fears.png" loading="lazy" alt="Артист Tears For Fears.">
               <h3 class="h4-bold-capitalize m-b-0">Tears For Fears</h3>
               <p class="m-0">434 086 поклонников</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Duran-Duran.png" alt="Артист Duran Duran.">
+              <img class="w-100" src="images/Duran-Duran.png" loading="lazy" alt="Артист Duran Duran.">
               <h3 class="h4-bold-capitalize m-b-0">Duran Duran</h3>
               <p class="m-0">631 071 поклонник</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Jack-Savoretti.png" alt="Артист Jack Savoretti.">
+              <img class="w-100" src="images/Jack-Savoretti.png" loading="lazy" alt="Артист Jack Savoretti.">
               <h3 class="h4-bold-capitalize m-b-0">Jack Savoretti</h3>
               <p class="m-0">26 857 поклонников</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Keane.png" alt="Артист Keane.">
+              <img class="w-100" src="images/Keane.png" loading="lazy" alt="Артист Keane.">
               <h3 class="h4-bold-capitalize m-b-0">Keane</h3>
               <p class="m-0">1 704 358 поклонников</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Frank-Sinatra.png" alt="Артист Frank Sinatra.">
+              <img class="w-100" src="images/Frank-Sinatra.png" loading="lazy" alt="Артист Frank Sinatra.">
               <h3 class="h4-bold-capitalize m-b-0">Frank Sinatra</h3>
               <p class="m-0">1 653 882 поклонников</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Paul-Young.png" alt="Артист Paul Young.">
+              <img class="w-100" src="images/Paul-Young.png" loading="lazy" alt="Артист Paul Young.">
               <h3 class="h4-bold-capitalize m-b-0">Paul Young</h3>
               <p class="m-0">50 329 поклонников</p>
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img class="w-100" src="images/Chris-Rea.png" alt="Артист Chris Rea.">
+              <img class="w-100" src="images/Chris-Rea.png" loading="lazy" alt="Артист Chris Rea.">
               <h3 class="h4-bold-capitalize m-b-0">Chris Rea</h3>
               <p class="m-0">73 351 поклонников</p>
             </a>
@@ -239,7 +239,7 @@
     </section>
   </main>
 
-  <footer class="bg-gradient">
+  <footer class="page-footer bg-gradient">
     <div class="container footer-grid-container p-t-48 p-b-64">
       <div>
         <h2 class="h4-bold">О нас</h2>
@@ -292,12 +292,12 @@
         <ul class="footer-social-flex-container">
           <li>
             <a href="#no_scroll">
-              <img src="images/Google+.png" alt="Логотип Google+.">
+              <img src="images/Google+.png" loading="lazy" alt="Логотип Google+.">
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img src="images/Twitter.png" alt="Логотип Twitter.">
+              <img src="images/Twitter.png" loading="lazy" alt="Логотип Twitter.">
             </a>
           </li>
         </ul>

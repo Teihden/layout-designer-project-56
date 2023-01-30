@@ -12,27 +12,26 @@
   flex: 1 1 $min-width-container;
 
   max-width: 575px;
+}
 
-  h3 {
-    font-size: 30px;
+.news-title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: capitalize;
 
-    @include media(medium) {
-      font-size: map.get($f-s-values, "f-s-1");
-
-      margin-bottom: 1rem;
-    }
+  @include media(medium) {
+    font-size: map.get($f-s-values, "f-s-1");
   }
 }
 
 .news-footer {
   @include flex-container(0, 1rem);
+}
 
-  font-size: map.get($f-s-values, "f-s-small");
-
-  .news-author {
-    color: map.get($color-values, "orange");
-    text-transform: uppercase;
-  }
+.news-author {
+  color: map.get($color-values, "orange");
+  text-transform: uppercase;
 }
 
 .news-item:nth-child(3n) {

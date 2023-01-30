@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body class="min-vh-100">
+<body class="t-dark-gray">
 
   <header class="page-header">
     <div class="container header-flex-container">
@@ -19,27 +19,27 @@
           <span class="t-white">Music Box</span>
         </a>
         <ul class="header-anchors-flex-container">
-          <li class="t-white">
-            <a>Главная</a>
+          <li>
+            <a class="header-link t-white">Главная</a>
           </li>
           <li>
-            <a href="#no_scroll">Каталог</a>
+            <a class="header-link t-dark-gray" href="#no_scroll">Каталог</a>
           </li>
           <li>
-            <a href="artist.html">Исполнители</a>
+            <a class="header-link t-dark-gray" href="artist.html">Исполнители</a>
           </li>
           <li>
-            <a href="#no_scroll">Контакты</a>
+            <a class="header-link t-dark-gray" href="#no_scroll">Контакты</a>
           </li>
         </ul>
       </nav>
       <label class="visually-hidden" for="header-search">Поиск</label>
-      <input class="header-search b-r-50 bg-dark" id="header-search" name="search" type="search" placeholder="Поиск&hellip;" required>
+      <input class="header-search input-dark" id="header-search" name="search" type="search" placeholder="Поиск&hellip;" required>
     </div>
   </header>
 
   <main>
-    <section id="page-description" class="hero bg-banner">
+    <section id="page-description" class="bg-hero-banner">
       <div class="container t-white a-center p-t-200 p-b-200">
         <h1 class="m-0 m-t-sm-48">Онлайн музыка где угодно</h1>
         <h2 class="m-t-0">без ограничений</h2>
@@ -47,7 +47,7 @@
         <form class="hero-form" action="#" method="post">
           <label class="visually-hidden" for="hero-form-name">Имя</label>
           <input class="hero-form-name input-transparent" id="hero-form-name" name="name" type="text" placeholder="Имя" required>
-          <label class="visually-hidden" for="header-email">Email</label>
+          <label class="visually-hidden" for="hero-form-email">Email</label>
           <input class="hero-form-email input-transparent" id="hero-form-email" name="email" type="email" placeholder="Email" required>
           <button class="btn btn-subsription btn-green" name="submit" type="submit">Получить доступ</button>
         </form>
@@ -57,35 +57,35 @@
     <section>
       <div id="page-pricing" class="container t-white a-center p-t-100">
         <h2 class="m-t-0 m-b-48">Формы подписки</h2>
-        <div class="pricing-flex-container m-t-0 m-b-40">
-          <div class="pricing-item b-r-16 bg-subscribe-1">
-            <h3 class="m-b-200">Бесплатная</h3>
+        <ol class="pricing-flex-container p-0 m-t-0 m-b-40">
+          <li class="pricing-item b-r-16 bg-free">
+            <h3 class="pricing-title m-b-200">Бесплатная</h3>
             <p class="pricing-value t-uppercase m-b-40">
               <span class="pricing-figure m-r-16">0</span>
               <span class="pricing-currency v-align-top">руб.</span>
             </p>
             <a class="btn btn-subsription btn-transparent-f-s-1" href="#no_scroll">Оформить</a>
             <p class="pricing-footer m-t-64 m-b-64">Оплата в месяц. Бесплатный тариф предоставляет доступ ко всей коллекции музыки. Присутствует реклама</p>
-          </div>
-          <div class="pricing-item b-r-16 bg-subscribe-2">
-            <h3 class="m-b-200">Стандартная</h3>
+          </li>
+          <li class="pricing-item b-r-16 bg-standard">
+            <h3 class="pricing-title m-b-200">Стандартная</h3>
             <p class="pricing-value t-uppercase m-b-40">
               <span class="pricing-figure m-r-16">250</span>
               <span class="pricing-currency v-align-top">руб.</span>
             </p>
             <a class="btn btn-subsription btn-transparent-f-s-1" href="#no_scroll">Оформить</a>
             <p class="pricing-footer m-t-64 m-b-64">Оплата в месяц. Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве</p>
-          </div>
-          <div class="pricing-item b-r-16 bg-subscribe-3">
-            <h3 class="m-b-200">Премиум</h3>
+          </li>
+          <li class="pricing-item b-r-16 bg-premium">
+            <h3 class="pricing-title m-b-200">Премиум</h3>
             <p class="pricing-value t-uppercase m-b-40">
               <span class="pricing-figure m-r-16">500</span>
               <span class="pricing-currency v-align-top">руб.</span>
             </p>
             <a class="btn btn-subsription btn-transparent-f-s-1" href="#no_scroll">Оформить</a>
             <p class="pricing-footer m-t-64 m-b-64">Оплата в месяц. Премиум тариф предоставляет доступ ко всей коллекции музыки в высоком качестве</p>
-          </div>
-        </div>
+          </li>
+        </ol>
         <p class="m-0">На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете скачать все композиции на ваше устройство и слушать музыку без подключения к интернету</p>
       </div>
     </section>
@@ -94,12 +94,12 @@
       <div id="page-news" class="container p-t-100">
         <h2 class="a-center m-t-0 m-b-48">Последние новости</h2>
         <article class="news-item">
-          <img class="news-image" src="images/Music-to-Be-Murdered-By.png" alt="Альбом Music to Be Murdered By.">
+          <img class="news-image" src="images/Music-to-Be-Murdered-By.png" loading="lazy" alt="Альбом Music to Be Murdered By.">
           <div class="news-body">
-            <h3 class="m-t-0 m-b-30 t-capitalize">Music to Be Murdered By</h3>
+            <h3 class="news-title m-b-md-16 m-t-0 m-b-30">Music to Be Murdered By</h3>
             <p class="m-b-24">Новый альбом Eminem «Music to Be Murdered By» уже доступен в нашем сервисе. На альбоме вас ждёт 20 новых треков.</p>
-            <div class="news-footer m-b-48">
-              <img src="images/avatar.png" width="19" height="19" alt="Аватар автора.">
+            <div class="news-footer m-b-48 f-s-small">
+              <img src="images/avatar.png" width="19" height="19" loading="lazy" alt="Аватар автора.">
               <div class="news-author">Music box</div>
               <time datetime="2020-01-17">17/01/2020</time>
             </div>
@@ -107,12 +107,12 @@
           </div>
         </article>
         <article class="news-item m-t-65">
-          <img class="news-image" src="images/Ordinary-Man.png" alt="Альбом Ordinary Man.">
+          <img class="news-image" src="images/Ordinary-Man.png" loading="lazy" alt="Альбом Ordinary Man.">
           <div class="news-body">
-            <h3 class="m-t-0 m-b-30 t-capitalize">Ordinary Man</h3>
+            <h3 class="news-title m-b-md-16 m-t-0 m-b-30">Ordinary Man</h3>
             <p class="m-b-24">Легенда рока Оззи Озборн спустя 10 лет выпустил новый альбом Ordinary Man. Слушайте в числе первых на Music Box</p>
-            <div class="news-footer m-b-48">
-              <img src="images/avatar.png"  width="19" height="19" alt="Аватар автора.">
+            <div class="news-footer m-b-48 f-s-small">
+              <img src="images/avatar.png"  width="19" height="19" loading="lazy" alt="Аватар автора.">
               <div class="news-author">Music box</div>
               <time datetime="2020-02-24">24/02/2020</time>
             </div>
@@ -131,13 +131,13 @@
             <p>С тарифом «Премиум» п риложение позволяет скачивать все композиции из нашей коллекции. Вы можете слушать музыку даже без интернета.</p>
             <a class="btn btn-app btn-red-oval" href="#no_scroll">Cкачать</a>
           </div>
-          <img src="images/iphone.png" alt="iPhones.">
+          <img src="images/iphone.png" loading="lazy" alt="iPhones.">
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gradient">
+  <footer class="page-footer bg-gradient">
     <div class="container footer-grid-container p-t-48 p-b-64">
       <div>
         <h2 class="h4-bold">О нас</h2>
@@ -190,12 +190,12 @@
         <ul class="footer-social-flex-container">
           <li>
             <a href="#no_scroll">
-              <img src="images/Google+.png" alt="Логотип Google+.">
+              <img src="images/Google+.png" loading="lazy" alt="Логотип Google+.">
             </a>
           </li>
           <li>
             <a href="#no_scroll">
-              <img src="images/Twitter.png" alt="Логотип Twitter.">
+              <img src="images/Twitter.png" loading="lazy" alt="Логотип Twitter.">
             </a>
           </li>
         </ul>

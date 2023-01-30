@@ -8,8 +8,11 @@
   },
   "main": "",
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "git-scripts": "^0.6.4",
     "htmlhint": "^1.1.4",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
     "purgecss": "^5.0.0",
     "sass": "^1.57.1",
     "stylelint": "^14.16.0",
