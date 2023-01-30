@@ -21,9 +21,6 @@ make install
 # Runs Stylelint, HTMLHint against source code for quality
 make lint
 
-# Deploys directory `src/` to Surge
-make deploy
-
 # Compiles source Sass into CSS
 make sass
 
@@ -39,4 +36,7 @@ make prefix
 
 # Runs Stylelint, HTMLHint, Sass, PurgeCSS, Autoprefixer in sequential order
 make build
+
+# Deploys directory `src/` to Surge
+make deploy
 ```

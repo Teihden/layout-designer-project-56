@@ -5,9 +5,6 @@ lint:
 	npx stylelint ./src/scss/*.scss
 	npx htmlhint ./src/*.html
 
-deploy:
-	npx surge --project ./src --domain https://mus-box.surge.sh
-
 sass:
 	npx sass --style=compressed src/scss/:src/css/
 
@@ -21,3 +18,6 @@ prefix:
 	npx postcss --replace src/css/*.css --use autoprefixer --no-map
 
 build: lint sass purge prefix
+
+deploy:
+	npx surge --project ./src --domain https://mus-box.surge.sh
