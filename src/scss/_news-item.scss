@@ -22,6 +22,7 @@
 
   @include media(medium) {
     font-size: map.get($f-s-values, "f-s-1");
+    line-height: 24px;
   }
 }
 
